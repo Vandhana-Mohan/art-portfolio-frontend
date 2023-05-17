@@ -12,13 +12,13 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Header />
-        <NavBar />
+        {/* <Header /> */}
+        {/* <NavBar /> */}
         <main>
           <Routes>
             <Route path="/about" element={<AboutUs />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/developers" element={<Developer />} />
+            {/* <Route path="/contact" element={<ContactUs />} /> */}
+            {/* <Route path="/developers" element={<Developer />} /> */}
             {/* <Route path="/groceries/:id/edit" element={<Edit />} />
             <Route path="/groceries/new" element={<New />} />
             <Route path="/groceries/:id" element={<Show />} /> */}
@@ -28,7 +28,7 @@ function App() {
             <Route path="*" element={<FourOFour />} />
           </Routes>
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );
