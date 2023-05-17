@@ -28,7 +28,7 @@ function App() {
             <Route path="*" element={<FourOFour />} />
           </Routes>
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </div>
   );
