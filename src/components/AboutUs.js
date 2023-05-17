@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
-    <div className="mx-auto px-4 py-10 max-w-lg rounded-lg shadow-green-500/50 border shadow-md">
+    <div className="mx-auto px-4 py-10 max-w-lg rounded-lg shadow-red-500/50 border shadow-md">
       <h1 className="text-3xl font-bold tracking-wide text-gray-900">
         About FreshPick
       </h1>
@@ -18,7 +18,7 @@ function AboutUs() {
         game, while saving time and money.
       </p>
       <Link to="/">
-        <h2 className="mt-10 bg-green-300 hover:bg-green-100 text-2xl font-bold py-3 px-3 flex focus:outline-none focus:shadow-outline rounded-lg shadow-green-500/50 border shadow-md w-max">
+        <h2 className="mt-10 m-6 bg-red-300 hover:bg-red-100 text-2xl font-bold py-3 px-3 flex focus:outline-none focus:shadow-outline rounded-lg shadow-red-500/50 border shadow-md w-max">
           Lets Begin Shopping &nbsp;&nbsp;🛒 &nbsp;🛒 &nbsp;🛒
         </h2>
       </Link>
