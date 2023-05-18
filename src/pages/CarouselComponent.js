@@ -11,7 +11,6 @@ function CarouselComponent() {
       .then((response) => response.json())
       .then((data) => {
         setImages(data);
-        console.log("fff", data);
       })
       .catch((error) => {
         console.log(error);
@@ -39,14 +38,14 @@ function CarouselComponent() {
   }, []);
 
   return (
-    <div className="max-w-lg mx-auto">
+    <div className="max-w-full mx-auto bg-green-100">
       <Carousel
         autoPlay
         infiniteLoop
-        interval={1000}
+        interval={2000}
         className="carousel"
         showThumbs={false}
-        showArrows={false} // Disable arrows
+        showArrows={true} // Enable arrows
         showStatus={false} // Disable status indicator
         swipeable={images.length > slidesToShow} // Enable swipe only if there are more slides than shown
         centerMode={slidesToShow !== 1} // Enable center mode if more than 1 slide is shown
@@ -59,7 +58,9 @@ function CarouselComponent() {
               alt={item.title}
               className="w-full h-auto object-cover"
             />
+ 
           </div>
+          
         ))}
       </Carousel>
     </div>
