@@ -10,7 +10,7 @@ function Header() {
               className="text-red-600 tracking-wider ml-2 text-3xl sm:text-5xl font-bold"
               style={{ fontFamily: "'Great Vibes', cursive" }}
             >
-              Fresh-Picks
+              Artistic Universe
             </h1>
           </Link>
         </div>

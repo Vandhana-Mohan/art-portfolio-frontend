@@ -7,15 +7,17 @@ import NavBar from "./components/NavBar";
 import Developer from "./components/Developer";
 import ContactUs from "./components/ContactUs";
 import FourOFour from "./pages/FourOFour";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Header />
-        {/* <NavBar /> */}
+        <NavBar />
         <main>
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/developers" element={<Developer />} />
