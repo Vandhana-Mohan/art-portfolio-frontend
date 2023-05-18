@@ -1,6 +1,6 @@
 // import Search from "./Search";
 import { Link } from "react-router-dom";
-// import Cart_Logo from "../assets/Cart_Logo.png";
+import Art_Logo from "../assets/Art_Logo.png";
 // import TotalItems from "./TotalItems";
 
 function NavBar() {
@@ -8,9 +8,9 @@ function NavBar() {
     <nav className="bg-red-900 flex flex-col sm:flex-row justify-around rounded shadow-red-500/50 shadow-xl">
       <Link to="/">
         <img
-          src=""
+          src={Art_Logo}
           alt="Shop_Logo"
-          className="w-20 h-20 shadow-red-500/50 shadow-lg"
+          className="w-32 h-32 shadow-green-500/50 shadow-lg object-contain"
         />
       </Link>
       <ul className="flex flex-col sm:flex-row mt-6 justify-around">
@@ -35,7 +35,6 @@ function NavBar() {
             Categories
           </Link>
         </li>
-
       </ul>
       {/* <TotalItems /> */}
       {/* <Search /> */}

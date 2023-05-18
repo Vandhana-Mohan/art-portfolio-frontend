@@ -58,9 +58,7 @@ function CarouselComponent() {
               alt={item.title}
               className="w-full h-auto object-cover"
             />
- 
           </div>
-          
         ))}
       </Carousel>
     </div>

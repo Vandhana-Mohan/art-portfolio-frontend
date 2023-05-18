@@ -1,100 +1,163 @@
 import { Link } from "react-router-dom";
 function Footer() {
   return (
-    <footer>
-      <nav className="bg-red-50 text-black w-full">
-        <ul className="flex flex-wrap items-center justify-center sm:justify-start md:justify-center lg:justify-center space-x-6 sm:space-x-16 mt-2">
-          <li className="cursor-pointer hover:text-red-300 text-base sm:text-lg">
-            <Link className="hover:text-red-700 hover:underline" to="/about">
-              {" "}
-              About Us
-            </Link>
-          </li>
-          <li className="cursor-pointer hover:text-red-300 text-base sm:text-lg">
-            <Link
-              className="hover:text-red-700 hover:underline"
-              to="/developers"
-            >
-              {" "}
-              About Developer
-            </Link>
-          </li>
-          <li className="cursor-pointer hover:text-red-300 text-base sm:text-lg">
-            <Link className="hover:text-red-700 hover:underline" to="/contact">
-              {" "}
-              Contact Us
-            </Link>
-          </li>
-          <li className="cursor-pointer hover:text-red-400 transition duration-300">
-            <Link
-              to="https://facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-red-700 "
-            >
-              <i className="fab fa-facebook-square text-2xl"></i>
-            </Link>
-          </li>
+    <footer className="bg-gray-100">
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="text-base sm:text-lg">
+            <ul className="space-y-4">
+              <li>
+                <Link
+                  to="/about"
+                  className="text-gray-700 hover:text-red-700 hover:underline"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/developers"
+                  className="text-gray-700 hover:text-red-700 hover:underline"
+                >
+                  About Developer
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-gray-700 hover:text-red-700 hover:underline"
+                >
+                  Contact Us
+                </Link>
+              </li>
+              <form>
+                <div className="flex items-center space-x-2 w-full">
+                  <input
+                    type="email"
+                    title="Enter Email"
+                    placeholder="Enter Email: JohnDoe@gmail.com"
+                    className="border border-gray-400 px-4 py-2 rounded-lg focus:outline-none focus:ring focus:border-red-500"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg"
+                  >
+                    Sign Up
+                  </button>
+                </div>
+              </form>
+            </ul>
+          </div>
+          <div className="text-base sm:text-lg">
+            <h3 className="text-gray-700 font-bold mb-4">Social Media</h3>
+            <ul className="space-y-4">
+              <li>
+                <SocialMediaIconLink
+                  url="https://facebook.com/"
+                  iconClassName="fab fa-facebook-square"
+                />{" "}
+                Facebook
+              </li>
+              <li>
+                <SocialMediaIconLink
+                  url="https://instagram.com/"
+                  iconClassName="fab fa-instagram"
+                />{" "}
+                Instagram
+              </li>
+              <li>
+                <SocialMediaIconLink
+                  url="https://twitter.com/"
+                  iconClassName="fab fa-twitter-square"
+                />{" "}
+                Twitter
+              </li>
+              <li>
+                <SocialMediaIconLink
+                  url="https://youtube.com/"
+                  iconClassName="fab fa-youtube"
+                />{" "}
+                YouTube
+              </li>
+              <li>
+                <SocialMediaIconLink
+                  url="https://github.com/Vandhana-Mohan"
+                  iconClassName="fab fa-github"
+                />{" "}
+                GitHub
+              </li>
+              <li>
+                <SocialMediaIconLink
+                  url="https://www.linkedin.com/in/vandhanamohan/"
+                  iconClassName="fab fa-linkedin"
+                />{" "}
+                LinkedIn
+              </li>
+            </ul>
+          </div>
 
-          <li className="cursor-pointer hover:text-red-400 transition duration-300">
-            <Link
-              to="https://instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-red-700"
-            >
-              <i className="fab fa-instagram text-2xl"></i>
-            </Link>
-          </li>
-          <li className="cursor-pointer hover:text-red-400 transition duration-300">
-            <Link
-              to="https://twitter.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-red-700"
-            >
-              <i className="fab fa-twitter-square text-2xl"></i>
-            </Link>
-          </li>
-
-          <li className="cursor-pointer hover:text-red-400 transition duration-300">
-            <Link
-              to="https://youtube.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-red-700"
-            >
-              <i className="fab fa-youtube text-2xl"></i>
-            </Link>
-          </li>
-
-          <li className="cursor-pointer hover:text-red-400 transition duration-300">
-            <Link
-              to="https://github.com/Vandhana-Mohan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-red-700"
-            >
-              <i className="fab fa-github text-2xl"></i>
-            </Link>
-          </li>
-
-          <li className="cursor-pointer hover:text-red-400 transition duration-300">
-            <Link
-              to="https://www.linkedin.com/in/vandhanamohan/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-red-700"
-            >
-              <i className="fab fa-linkedin text-2xl"></i>
-            </Link>
-          </li>
-        </ul>
-        <p className="text-center text-black pb-0 mt-1 text-xs sm:text-base">
+          <div className="text-base sm:text-lg">
+            <ul className="space-y-4">
+              <li>
+                <Link
+                  to="/signup"
+                  className="text-gray-700 hover:text-red-700 hover:underline"
+                >
+                  Sign Up/Create Account
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/login"
+                  className="text-gray-700 hover:text-red-700 hover:underline"
+                >
+                  Log In
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/forgot-password"
+                  className="text-gray-700 hover:text-red-700 hover:underline"
+                >
+                  Forgot Password
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/faq"
+                  className="text-gray-700 hover:text-red-700 hover:underline"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/help-support"
+                  className="text-gray-700 hover:text-red-700 hover:underline"
+                >
+                  Help & Support
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p className="text-center text-gray-500 mt-8 text-xs sm:text-base">
           © 2023 Vandhana Mohan. All rights reserved.
         </p>
-      </nav>
+      </div>
     </footer>
+  );
+}
+function SocialMediaIconLink({ url, iconClassName }) {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-500 hover:text-red-700 transition duration-300"
+    >
+      <i className={iconClassName + " text-2xl"}></i>
+    </a>
   );
 }
 export default Footer;
