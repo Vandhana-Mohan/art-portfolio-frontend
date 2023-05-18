@@ -1,4 +1,4 @@
-import GroceryDetails from "../components/GroceryDetails";
+import GroceryDetails from "../components/PortraitDetails";
 
 function Show() {
   return (

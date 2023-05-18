@@ -1,4 +1,4 @@
-import GroceryNewForm from "../components/GroceryNewForm";
+import GroceryNewForm from "../components/PortraitNewForm";
 
 function New() {
   return (

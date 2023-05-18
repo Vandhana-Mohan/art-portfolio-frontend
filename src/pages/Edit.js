@@ -1,4 +1,4 @@
-import GroceryEditForm from "../components/GroceryEditForm";
+import GroceryEditForm from "../components/PortraitEditForm";
 
 function Edit() {
   return (

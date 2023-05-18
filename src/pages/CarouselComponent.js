@@ -11,6 +11,7 @@ function CarouselComponent() {
       .then((response) => response.json())
       .then((data) => {
         setImages(data);
+        console.log(data)
       })
       .catch((error) => {
         console.log(error);
