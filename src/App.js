@@ -28,9 +28,9 @@ function App() {
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/developers" element={<Developer />} />
-            <Route path="/groceries/:id/edit" element={<Edit />} />
-            <Route path="/groceries/new" element={<New />} />
-            <Route path="/groceries/:id" element={<Show />} />
+            <Route path="/art/:id/edit" element={<Edit />} />
+            <Route path="/art/new" element={<New />} />
+            <Route path="/art/:id" element={<Show />} />
             {/* <Route path="/art/search/:id" element={<ShowSearch />} /> */}
             {/* <Route path="/categories" element={<CategoriesIndex />} /> */}
             <Route path="*" element={<FourOFour />} />

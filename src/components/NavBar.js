@@ -1,7 +1,5 @@
-// import Search from "./Search";
 import { Link } from "react-router-dom";
 import Art_Logo from "../assets/Art_Logo.png";
-// import TotalItems from "./TotalItems";
 
 function NavBar() {
   return (
@@ -16,7 +14,12 @@ function NavBar() {
       <ul className="flex flex-col sm:flex-row mt-6 justify-around">
         <li className="cursor-pointer hover:text-gray-300 text-xl font-bold mb-6">
           <Link to="/" className="bg-transparent text-white py-2 px-4 rounded">
-            Explore All
+            Examples
+          </Link>
+        </li>
+        <li className="cursor-pointer hover:text-gray-300 text-xl font-bold mb-6">
+          <Link to="/" className="bg-transparent text-white py-2 px-4 rounded">
+            My Collection
           </Link>
         </li>
         <li className="cursor-pointer hover:text-gray-300 mr-4 text-xl font-bold mb-6">
@@ -24,22 +27,35 @@ function NavBar() {
             to="/groceries/new"
             className="bg-transparent text-white py-2 px-4 rounded"
           >
-            Add New Item
+            Add New Collection
           </Link>
         </li>
         <li className="cursor-pointer hover:text-gray-300 mr-4 text-xl font-bold mb-6">
           <Link
-            to="/categories"
+            to="/groceries/new"
             className="bg-transparent text-white py-2 px-4 rounded"
           >
-            Categories
+            Add Image to Collection
           </Link>
         </li>
       </ul>
-      {/* <TotalItems /> */}
-      {/* <Search /> */}
     </nav>
   );
 }
 
 export default NavBar;
+
+/* 
+
+<li className="cursor-pointer hover:text-gray-300 mr-4 text-xl font-bold mb-6">
+    <Link
+      to="/categories"
+      className="bg-transparent text-white py-2 px-4 rounded"
+    >
+      Categories
+    </Link>
+</li>
+      <TotalItems />
+      <Search /> 
+
+*/
