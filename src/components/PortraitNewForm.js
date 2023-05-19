@@ -20,12 +20,12 @@ function PortraitNewForm() {
   function handleSubmit(event) {
     event.preventDefault();
     axios
-      .post(`${process.env.REACT_APP_API_URL}/groceries`, newPortrait)
+      .post(`${process.env.REACT_APP_API_URL}/art`, newPortrait)
       .then(() => {
-        navigate("/");
+        navigate("/index");
       })
       .catch((error) => {
-        console.log("2345", error);
+        console.log(error);
         navigate("/not-found");
       });
   }
@@ -34,80 +34,56 @@ function PortraitNewForm() {
     setNewPortrait({ ...newPortrait, [event.target.id]: event.target.value });
   }
 
-  function handleCheckboxChange(event) {
-    setNewPortrait({ ...newPortrait, is_organic: event.target.checked });
-  }
-
-  function handleUnitChange(event) {
-    const { value } = event.target;
-    setNewPortrait((prev) => ({ ...prev, unit: value }));
-  }
-
-  function handleCategoryChange(event) {
-    const { value } = event.target;
-    if (value === "addCategory") {
-      const newCategory = prompt("Enter the name of the new category:");
-      if (newCategory) {
-        setCategories([...categories, newCategory]);
-        setNewPortrait((prev) => ({
-          ...prev,
-          category: newCategory,
-        }));
-      }
-    } else {
-      setNewPortrait((prev) => ({
-        ...prev,
-        category: value,
-      }));
-    }
-  }
-
   return (
-    <div className="p-4">
+    <div className="p-6 m-6">
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col w-3/4">
-          <label htmlFor="name" className="mb-1 font-medium text-gray-700">
+          <label
+            htmlFor="first_name"
+            className="mb-1 font-medium text-gray-700"
+          >
             First Name: (Required)
           </label>
           <input
-            id="name"
+            id="first_name"
             type="text"
             required
             autoFocus
             placeholder="Enter your first name : "
             title="First Name is required"
             onChange={handleTextChange}
-            value={newPortrait.name}
+            value={newPortrait.first_name}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
         <div className="flex flex-col w-3/4">
-          <label htmlFor="name" className="mb-1 font-medium text-gray-700">
+          <label htmlFor="last_name" className="mb-1 font-medium text-gray-700">
             Last Name: (Required)
           </label>
           <input
-            id="name"
+            id="last_name"
             type="text"
             required
-            autoFocus
             placeholder="Enter your last name : "
             title="Last Name is required"
             onChange={handleTextChange}
-            value={newPortrait.name}
+            value={newPortrait.last_name}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
 
         <div className="flex flex-col w-3/4">
-          <label htmlFor="name" className="mb-1 font-medium text-gray-700">
-            Profession:
+          <label
+            htmlFor="profession"
+            className="mb-1 font-medium text-gray-700"
+          >
+            Profession: (Optional)
           </label>
           <input
-            id="name"
+            id="profession"
             type="text"
-            autoFocus
-            placeholder="Enter the name of product:"
-            title="Name of the Product is required"
+            placeholder="Enter your profession : "
+            title="What is your profession? "
             onChange={handleTextChange}
             value={newPortrait.profession}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
@@ -115,16 +91,15 @@ function PortraitNewForm() {
         </div>
 
         <div className="flex flex-col w-3/4">
-          <label htmlFor="name" className="mb-1 font-medium text-gray-700">
+          <label htmlFor="location" className="mb-1 font-medium text-gray-700">
             Location: (Required)
           </label>
           <input
             id="name"
             type="text"
             required
-            autoFocus
-            placeholder="Enter the name of product:"
-            title="Name of the Product is required"
+            placeholder="Enter your location : "
+            title="Which country do you belong to ? "
             onChange={handleTextChange}
             value={newPortrait.location}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
@@ -132,22 +107,22 @@ function PortraitNewForm() {
         </div>
 
         <div className="flex flex-col w-3/4">
-          <label htmlFor="image_url" className="mb-1 font-medium text-gray-700">
+          <label htmlFor="instagram" className="mb-1 font-medium text-gray-700">
             Your Instagram link : (Optional)
           </label>
           <input
-            id="image_url"
+            id="instagram"
             type="text"
             onChange={handleTextChange}
-            placeholder="Enter the URL link of product:"
-            title="URL image link of the Product -- optional"
+            placeholder="Enter the URL link of your instagram :"
+            title="URL link of your instagram -- optional"
             value={newPortrait.instagram}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
 
         <div className="flex flex-col w-3/4">
-          <label htmlFor="image_url" className="mb-1 font-medium text-gray-700">
+          <label htmlFor="youtube" className="mb-1 font-medium text-gray-700">
             Your Instagram link : (Optional)
           </label>
           <input
@@ -162,11 +137,11 @@ function PortraitNewForm() {
         </div>
 
         <div className="flex flex-col w-3/4">
-          <label htmlFor="image_url" className="mb-1 font-medium text-gray-700">
+          <label htmlFor="facebook" className="mb-1 font-medium text-gray-700">
             Your Facebook link : (Optional)
           </label>
           <input
-            id="image_url"
+            id="facebook"
             type="text"
             onChange={handleTextChange}
             placeholder="Enter the URL link of product:"
@@ -177,11 +152,11 @@ function PortraitNewForm() {
         </div>
 
         <div className="flex flex-col w-3/4">
-          <label htmlFor="image_url" className="mb-1 font-medium text-gray-700">
+          <label htmlFor="tik_tok" className="mb-1 font-medium text-gray-700">
             Your TikTok link : (Optional)
           </label>
           <input
-            id="image_url"
+            id="tik_tok"
             type="text"
             onChange={handleTextChange}
             placeholder="Enter the URL link of product:"
