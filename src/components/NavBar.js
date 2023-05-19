@@ -1,45 +1,37 @@
 import { Link } from "react-router-dom";
-import Art_Logo from "../assets/Art_Logo.png";
 
 function NavBar() {
   return (
     <nav className="sticky top-0 bg-red-900 flex flex-col sm:flex-row items-center justify-between rounded shadow-red-500/50 shadow-xl px-6 py-3">
-      <Link to="/">
-        <img
-          src={Art_Logo}
-          alt="Shop_Logo"
-          className="w-16 h-16 object-cover"
-        />
-      </Link>
-      <ul className="flex flex-col sm:flex-row mt-4 sm:mt-0">
-        <li className="mx-2 sm:mx-4">
+      <ul className="flex flex-col sm:flex-row justify-evenly mt-4 sm:mt-0">
+        <li className="mx-2 sm:mx-4 md:mx-8 lg:mx-32">
           <Link
             to="/"
-            className="text-white hover:text-gray-300 text-xl font-bold"
+            className="text-white hover:text-gray-300 text-xl font-bold transition-colors duration-300"
           >
             Examples
           </Link>
         </li>
-        <li className="mx-2 sm:mx-4">
+        <li className="mx-2 sm:mx-4 md:mx-8 lg:mx-16">
           <Link
             to="/"
-            className="text-white hover:text-gray-300 text-xl font-bold"
+            className="text-white hover:text-gray-300 text-xl font-bold transition-colors duration-300"
           >
             My Collection
           </Link>
         </li>
-        <li className="mx-2 sm:mx-4">
+        <li className="mx-2 sm:mx-4 md:mx-8 lg:mx-16">
           <Link
             to="/groceries/new"
-            className="text-white hover:text-gray-300 text-xl font-bold"
+            className="text-white hover:text-gray-300 text-xl font-bold transition-colors duration-300"
           >
             Add New Collection
           </Link>
         </li>
-        <li className="mx-2 sm:mx-4">
+        <li className="mx-2 sm:mx-4 md:mx-8 lg:mx-16">
           <Link
             to="/groceries/new"
-            className="text-white hover:text-gray-300 text-xl font-bold"
+            className="text-white hover:text-gray-300 text-xl font-bold transition-colors duration-300"
           >
             Add Image to Collection
           </Link>

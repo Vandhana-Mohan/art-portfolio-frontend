@@ -14,6 +14,7 @@ import Edit from "./pages/Edit";
 import Index from "./pages/Index";
 import New from "./pages/New";
 import Show from "./pages/Show";
+import FilterButtons from "./components/FilterButtons";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <NavBar />
+        <FilterButtons />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
