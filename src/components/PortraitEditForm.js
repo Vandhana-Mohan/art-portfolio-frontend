@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function GroceryEditForm() {
+function PortraitEditForm() {
   let { id } = useParams();
   let navigate = useNavigate();
 
-  const [editGrocery, setEditGrocery] = useState({
+  const [editPortrait, setEditPortrait] = useState({
     name: "",
     category: "",
     image_url: "",
@@ -46,16 +46,16 @@ function GroceryEditForm() {
   ]);
 
   function handleTextChange(event) {
-    setEditGrocery({ ...editGrocery, [event.target.id]: event.target.value });
+    setEditPortrait({ ...editPortrait, [event.target.id]: event.target.value });
   }
 
   function handleCheckboxChange(event) {
-    setEditGrocery({ ...editGrocery, is_organic: event.target.checked });
+    setEditPortrait({ ...editPortrait, is_organic: event.target.checked });
   }
 
   function handleUnitChange(event) {
     const { value } = event.target;
-    setEditGrocery((prev) => ({ ...prev, unit: value }));
+    setEditPortrait((prev) => ({ ...prev, unit: value }));
   }
 
   function handleCategoryChange(event) {
@@ -64,13 +64,13 @@ function GroceryEditForm() {
       const newCategory = prompt("Enter the name of the new category:");
       if (newCategory) {
         setCategories([...categories, newCategory]);
-        setEditGrocery((prev) => ({
+        setEditPortrait((prev) => ({
           ...prev,
           category: newCategory,
         }));
       }
     } else {
-      setEditGrocery((prev) => ({
+      setEditPortrait((prev) => ({
         ...prev,
         category: value,
       }));
@@ -83,7 +83,7 @@ function GroceryEditForm() {
       .then((data) => {
         delete data.id;
 
-        setEditGrocery(data);
+        setEditPortrait(data);
       })
       .catch((error) => {
         console.log(error);
@@ -92,10 +92,10 @@ function GroceryEditForm() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log("3233", editGrocery);
+    console.log("3233", editPortrait);
     // console.log(`${process.env.REACT_APP_API_URL}/groceries/${id}`);
     axios
-      .put(`${process.env.REACT_APP_API_URL}/groceries/${id}`, editGrocery)
+      .put(`${process.env.REACT_APP_API_URL}/groceries/${id}`, editPortrait)
       .then(() => {
         navigate(`/groceries/${id}`);
       })
@@ -120,7 +120,7 @@ function GroceryEditForm() {
             placeholder="Enter the name of product:"
             title="Name of the Product is required"
             onChange={handleTextChange}
-            value={editGrocery.name}
+            value={editPortrait.name}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-full"
           />
         </div>
@@ -131,7 +131,7 @@ function GroceryEditForm() {
           </label>
           <select
             id="category"
-            value={editGrocery.category}
+            value={editPortrait.category}
             title="Choose category - optional"
             onChange={handleCategoryChange}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-full"
@@ -156,7 +156,7 @@ function GroceryEditForm() {
             onChange={handleTextChange}
             placeholder="Enter the URL link of product:"
             title="URL image link of the Product -- optional"
-            value={editGrocery.image_url}
+            value={editPortrait.image_url}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-full"
           />
         </div>
@@ -173,7 +173,7 @@ function GroceryEditForm() {
             title="Description of the Product -- optional"
             placeholder="Enter a description for the product:"
             onChange={handleTextChange}
-            value={editGrocery.description}
+            value={editPortrait.description}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-full"
           ></textarea>
         </div>
@@ -189,7 +189,7 @@ function GroceryEditForm() {
             min="0"
             step="0.01"
             onChange={handleTextChange}
-            value={editGrocery.price}
+            value={editPortrait.price}
             placeholder="Enter price 0.00 - no $ sign needed"
             title="Price is required"
             required
@@ -206,7 +206,7 @@ function GroceryEditForm() {
             min="0"
             step="0.01"
             onChange={handleTextChange}
-            value={editGrocery.quantity}
+            value={editPortrait.quantity}
             title="Quantity is required"
             placeholder="Enter the quantity: "
             required
@@ -222,7 +222,7 @@ function GroceryEditForm() {
             id="unit"
             onChange={handleUnitChange}
             title="Choose unit -- optional"
-            value={editGrocery.unit}
+            value={editPortrait.unit}
             className="lg:w-full py-2 px-3 rounded-md border relative bg-white  border-gray-300 bg-white text-gray-900 shadow-sm focus:outline-none focus:ring focus:ring-blue-600 focus:border-transparent"
           >
             <option value="">-- Choose a unit --</option>
@@ -278,4 +278,4 @@ function GroceryEditForm() {
   );
 }
 
-export default GroceryEditForm;
+export default PortraitEditForm;
