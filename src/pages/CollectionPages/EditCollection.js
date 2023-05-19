@@ -1,4 +1,4 @@
-import EditCollectionForm from "../components/EditCollectionForm";
+import EditCollectionForm from "../../components/CollectionComponents/EditCollectionForm";
 
 function EditCollection() {
   return (

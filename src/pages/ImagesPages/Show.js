@@ -1,4 +1,4 @@
-import PortraitDetails from "../components/PortraitDetails";
+import PortraitDetails from "../../components/ImagesComponents/PortraitDetails";
 
 function Show() {
   return (

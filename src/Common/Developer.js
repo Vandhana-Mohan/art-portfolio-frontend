@@ -1,10 +1,10 @@
-// import Vandhana from "../assets/vandhana.jpeg";
+import Vandhana from "../assets/vandhana.jpeg";
 
 function Developer() {
   const developers = [
     {
       name: "Vandhana Mohan",
-      //   photo: Vandhana,
+      photo: Vandhana,
       bio: "I am a full-stack web developer who loves crafting beautiful and intuitive user experiences.",
       hobbies: "I love traveling and gardening.",
       github: "https://github.com/Vandhana-Mohan",

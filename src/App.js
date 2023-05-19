@@ -2,23 +2,22 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Components
-import AboutUs from "./components/AboutUs";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import NavBar from "./components/NavBar";
-import Developer from "./components/Developer";
-import ContactUs from "./components/ContactUs";
-import FilterButtons from "./components/FilterButtons";
+import AboutUs from "./Common/AboutUs";
+import ContactUs from "./Common/ContactUs";
+import Developer from "./Common/Developer";
+import FilterButtons from "./Common/FilterButtons";
+import Footer from "./Common/Footer";
+import Header from "./Common/Header";
+import NavBar from "./Common/NavBar";
 
 // Pages
 import FourOFour from "./pages/FourOFour";
 import Home from "./pages/Home";
-import EditCollection from "./pages/EditCollection";
-import Index from "./pages/Index";
-import NewCollection from "./pages/NewCollection";
-import Show from "./pages/Show";
-import NewUser from "./pages/NewUser";
-
+import EditCollection from "./pages/CollectionPages/EditCollection";
+import Index from "./pages/ImagesPages/Index";
+import NewCollection from "./pages/CollectionPages/NewCollection";
+import Show from "./pages/ImagesPages/Show";
+import NewUser from "./pages/UserPages/NewUser";
 function App() {
   return (
     <div>

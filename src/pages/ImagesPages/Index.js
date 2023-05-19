@@ -1,4 +1,4 @@
-import Portraits from "../components/Portraits";
+import Portraits from "../../components/ImagesComponents/Portraits";
 
 function Index() {
   return (

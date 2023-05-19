@@ -1,4 +1,4 @@
-import NewCollectionForm from "../components/NewCollectionForm";
+import NewCollectionForm from "../../components/CollectionComponents/NewCollectionForm";
 
 function NewCollection() {
   return (
