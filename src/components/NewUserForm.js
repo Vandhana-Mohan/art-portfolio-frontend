@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function NewCollectionForm() {
+function NewUserForm() {
   let navigate = useNavigate();
 
-  const [newPortrait, setNewPortrait] = useState({
+  const [newUser, setNewUser] = useState({
     first_name: "",
     last_name: "",
     about_artist: "",
@@ -20,7 +20,7 @@ function NewCollectionForm() {
   function handleSubmit(event) {
     event.preventDefault();
     axios
-      .post(`${process.env.REACT_APP_API_URL}/artworks/user`, newPortrait)
+      .post(`${process.env.REACT_APP_API_URL}/artworks/user`, newUser)
       .then(() => {
         navigate("/index");
       })
@@ -31,7 +31,7 @@ function NewCollectionForm() {
   }
 
   function handleTextChange(event) {
-    setNewPortrait({ ...newPortrait, [event.target.id]: event.target.value });
+    setNewUser({ ...newUser, [event.target.id]: event.target.value });
   }
 
   return (
@@ -52,7 +52,7 @@ function NewCollectionForm() {
             placeholder="Enter your first name : "
             title="First Name is required"
             onChange={handleTextChange}
-            value={newPortrait.first_name}
+            value={newUser.first_name}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
@@ -67,7 +67,7 @@ function NewCollectionForm() {
             placeholder="Enter your last name : "
             title="Last Name is required"
             onChange={handleTextChange}
-            value={newPortrait.last_name}
+            value={newUser.last_name}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
@@ -85,7 +85,7 @@ function NewCollectionForm() {
             placeholder="Enter your profession : "
             title="What is your profession? "
             onChange={handleTextChange}
-            value={newPortrait.profession}
+            value={newUser.profession}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
@@ -101,7 +101,7 @@ function NewCollectionForm() {
             placeholder="Enter your location : "
             title="Which country do you belong to ? "
             onChange={handleTextChange}
-            value={newPortrait.location}
+            value={newUser.location}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
@@ -116,7 +116,7 @@ function NewCollectionForm() {
             onChange={handleTextChange}
             placeholder="Enter the URL link of your instagram :"
             title="URL link of your instagram -- optional"
-            value={newPortrait.instagram}
+            value={newUser.instagram}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
@@ -131,7 +131,7 @@ function NewCollectionForm() {
             onChange={handleTextChange}
             placeholder="Enter the URL link of product:"
             title="URL image link of the Product -- optional"
-            value={newPortrait.youtube}
+            value={newUser.youtube}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
@@ -146,7 +146,7 @@ function NewCollectionForm() {
             onChange={handleTextChange}
             placeholder="Enter the URL link of product:"
             title="URL image link of the Product -- optional"
-            value={newPortrait.facebook}
+            value={newUser.facebook}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
@@ -161,7 +161,7 @@ function NewCollectionForm() {
             onChange={handleTextChange}
             placeholder="Enter the URL link of product:"
             title="URL image link of the Product -- optional"
-            value={newPortrait.tik_tok}
+            value={newUser.tik_tok}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
@@ -179,7 +179,7 @@ function NewCollectionForm() {
             title="A few words about you -- optional"
             placeholder="Enter a few words about you:"
             onChange={handleTextChange}
-            value={newPortrait.about_artist}
+            value={newUser.about_artist}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           ></textarea>
         </div>
@@ -212,4 +212,4 @@ function NewCollectionForm() {
   );
 }
 
-export default NewCollectionForm;
+export default NewUserForm;

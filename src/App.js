@@ -13,10 +13,11 @@ import FilterButtons from "./components/FilterButtons";
 // Pages
 import FourOFour from "./pages/FourOFour";
 import Home from "./pages/Home";
-import EditCollection from "./pages/Edit";
+import EditCollection from "./pages/EditCollection";
 import Index from "./pages/Index";
-import NewCollection from "./pages/New";
+import NewCollection from "./pages/NewCollection";
 import Show from "./pages/Show";
+import NewUser from "./pages/NewUser";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/index" element={<Index />} />
+            <Route path="/signUp" element={<NewUser />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/developers" element={<Developer />} />

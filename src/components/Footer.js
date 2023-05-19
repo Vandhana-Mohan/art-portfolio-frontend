@@ -42,7 +42,12 @@ function Footer() {
                     type="submit"
                     className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg"
                   >
-                    Sign Up
+                    <Link
+                      className="text-red-600 text-lg hover:text-red-700 hover:underline"
+                      to="/signUp"
+                    >
+                      Sign Up
+                    </Link>
                   </button>
                 </div>
               </form>

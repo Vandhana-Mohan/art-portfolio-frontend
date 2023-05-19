@@ -31,7 +31,14 @@ function Header() {
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-center">
           <i className="fa fa-user fa-2x sm:fa-3x animate-pulse mb-2 mr-2 text-red"></i>
           <div className="text-red-600 text-lg">Already a member? Log In</div>
-          <div className="text-red-600 text-lg">Sign Up</div>
+          <div className="text-red-600 text-lg">
+            <Link
+              className="text-red-600 text-lg hover:text-red-700 hover:underline"
+              to="/signUp"
+            >
+              Sign Up
+            </Link>
+          </div>
           <div>
             <Link
               className="text-red-600 text-lg hover:text-red-700 hover:underline"
