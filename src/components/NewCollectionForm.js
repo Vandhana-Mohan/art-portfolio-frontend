@@ -20,7 +20,7 @@ function PortraitNewForm() {
   function handleSubmit(event) {
     event.preventDefault();
     axios
-      .post(`${process.env.REACT_APP_API_URL}/art`, newPortrait)
+      .post(`${process.env.REACT_APP_API_URL}/artworks/user`, newPortrait)
       .then(() => {
         navigate("/index");
       })
@@ -95,7 +95,7 @@ function PortraitNewForm() {
             Location: (Required)
           </label>
           <input
-            id="name"
+            id="location"
             type="text"
             required
             placeholder="Enter your location : "

@@ -13,11 +13,10 @@ import FilterButtons from "./components/FilterButtons";
 // Pages
 import FourOFour from "./pages/FourOFour";
 import Home from "./pages/Home";
-import Edit from "./pages/Edit";
+import EditCollection from "./pages/Edit";
 import Index from "./pages/Index";
-import New from "./pages/New";
+import NewCollection from "./pages/New";
 import Show from "./pages/Show";
-
 
 function App() {
   return (
@@ -28,13 +27,13 @@ function App() {
         <FilterButtons />
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />  
+            <Route path="/" element={<Home />} />
             <Route path="/index" element={<Index />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/developers" element={<Developer />} />
-            <Route path="/art/:id/edit" element={<Edit />} />
-            <Route path="/art/new" element={<New />} />
+            <Route path="/art/:id/edit" element={<EditCollection />} />
+            <Route path="/art/new" element={<NewCollection />} />
             <Route path="/art/:id" element={<Show />} />
             {/* <Route path="/art/search/:id" element={<ShowSearch />} /> */}
             {/* <Route path="/categories" element={<CategoriesIndex />} /> */}
