@@ -6,14 +6,15 @@ function PortraitNewForm() {
   let navigate = useNavigate();
 
   const [newPortrait, setNewPortrait] = useState({
-    name: "",
-    category: "",
-    image_url: "",
-    description: "",
-    price: "",
-    quantity: "",
-    unit: "",
-    is_organic: false,
+    first_name: "",
+    last_name: "",
+    about_artist: "",
+    profession: "",
+    location: "",
+    instagram: "",
+    facebook: "",
+    tik_tok: "",
+    youtube: "",
   });
 
   function handleSubmit(event) {
@@ -66,15 +67,31 @@ function PortraitNewForm() {
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col w-3/4">
           <label htmlFor="name" className="mb-1 font-medium text-gray-700">
-            First Name Last Name: (Required)
+            First Name: (Required)
           </label>
           <input
             id="name"
             type="text"
             required
             autoFocus
-            placeholder="Enter the name of product:"
-            title="Name of the Product is required"
+            placeholder="Enter your first name : "
+            title="First Name is required"
+            onChange={handleTextChange}
+            value={newPortrait.name}
+            className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
+          />
+        </div>
+        <div className="flex flex-col w-3/4">
+          <label htmlFor="name" className="mb-1 font-medium text-gray-700">
+            Last Name: (Required)
+          </label>
+          <input
+            id="name"
+            type="text"
+            required
+            autoFocus
+            placeholder="Enter your last name : "
+            title="Last Name is required"
             onChange={handleTextChange}
             value={newPortrait.name}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
@@ -83,17 +100,16 @@ function PortraitNewForm() {
 
         <div className="flex flex-col w-3/4">
           <label htmlFor="name" className="mb-1 font-medium text-gray-700">
-            Profession: (Required)
+            Profession:
           </label>
           <input
             id="name"
             type="text"
-            required
             autoFocus
             placeholder="Enter the name of product:"
             title="Name of the Product is required"
             onChange={handleTextChange}
-            value={newPortrait.name}
+            value={newPortrait.profession}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
@@ -110,7 +126,7 @@ function PortraitNewForm() {
             placeholder="Enter the name of product:"
             title="Name of the Product is required"
             onChange={handleTextChange}
-            value={newPortrait.name}
+            value={newPortrait.location}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
@@ -125,7 +141,22 @@ function PortraitNewForm() {
             onChange={handleTextChange}
             placeholder="Enter the URL link of product:"
             title="URL image link of the Product -- optional"
-            value={newPortrait.image_url}
+            value={newPortrait.instagram}
+            className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
+          />
+        </div>
+
+        <div className="flex flex-col w-3/4">
+          <label htmlFor="image_url" className="mb-1 font-medium text-gray-700">
+            Your Instagram link : (Optional)
+          </label>
+          <input
+            id="youtube"
+            type="text"
+            onChange={handleTextChange}
+            placeholder="Enter the URL link of product:"
+            title="URL image link of the Product -- optional"
+            value={newPortrait.youtube}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
@@ -140,7 +171,7 @@ function PortraitNewForm() {
             onChange={handleTextChange}
             placeholder="Enter the URL link of product:"
             title="URL image link of the Product -- optional"
-            value={newPortrait.image_url}
+            value={newPortrait.facebook}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
@@ -155,25 +186,25 @@ function PortraitNewForm() {
             onChange={handleTextChange}
             placeholder="Enter the URL link of product:"
             title="URL image link of the Product -- optional"
-            value={newPortrait.image_url}
+            value={newPortrait.tik_tok}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
         </div>
 
         <div className="flex flex-col w-3/4">
           <label
-            htmlFor="description"
+            htmlFor="about_artist"
             className="mb-1 font-medium text-gray-700"
           >
             About You : (Optional)
           </label>
           <textarea
-            id="description"
+            id="about_artist"
             rows="10"
-            title="Description of the Product -- optional"
-            placeholder="Enter a description for the product:"
+            title="A few words about you -- optional"
+            placeholder="Enter a few words about you:"
             onChange={handleTextChange}
-            value={newPortrait.description}
+            value={newPortrait.about_artist}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           ></textarea>
         </div>
