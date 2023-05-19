@@ -123,7 +123,7 @@ function NewUserForm() {
 
         <div className="flex flex-col w-3/4">
           <label htmlFor="youtube" className="mb-1 font-medium text-gray-700">
-            Your Instagram link : (Optional)
+            Your Youtube link : (Optional)
           </label>
           <input
             id="youtube"
