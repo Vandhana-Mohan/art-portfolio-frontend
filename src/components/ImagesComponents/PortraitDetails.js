@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
-
 import { Link, useNavigate, useParams } from "react-router-dom";
-
 import axios from "axios";
 
 function PortraitDetails() {
   let { id } = useParams();
-
   let navigate = useNavigate();
 
   const [showImage, setShowImage] = useState({
@@ -34,7 +31,7 @@ function PortraitDetails() {
   }, [id, navigate]);
 
   function handleDelete() {
-    if (window.confirm("Are you sure you want to delete this item ? ")) {
+    if (window.confirm("Are you sure you want to delete this item?")) {
       fetch(`${process.env.REACT_APP_API_URL}/artworks/images/${id}`, {
         method: "DELETE",
       })
@@ -50,61 +47,51 @@ function PortraitDetails() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div className="flex flex-col justify-between">
-        <div className="flex flex-col space-y-4 p-6 m-6">
-          <h2 className="text-2xl font-bold mb-2">
-            <strong>Title:</strong>{" "}
-            {showImage.title
-              .split(" ")
-              .map((word) => word.slice(0, 1).toUpperCase() + word.slice(1))
-              .join(" ")}
-          </h2>
+      <div className="p-6 m-6 bg-white rounded-lg shadow-md">
+        <h2 className="text-2xl font-bold text-center mb-8 capitalize">
+          {showImage.title}
+        </h2>
 
-          <div className="flex items-center space-x-2">
-            <h3 className="text-lg mb-2">
-              <strong>Description:</strong>
-            </h3>
-            <p className="text-lg mb-2">
-              {showImage.description
-                ? showImage.description.charAt(0).toUpperCase() +
-                  showImage.description.slice(1)
-                : "Not Available"}
-            </p>
-          </div>
-
-          <div className="flex items-center space-x-2">
-            <h3 className="text-lg mb-2">
-              <strong>Medium / Material :</strong>
-            </h3>
-            <p className="text-lg mb-2">
-              {showImage.medium
-                ? showImage.medium.charAt(0).toUpperCase() +
-                  showImage.medium.slice(1)
-                : "Not Available"}
-            </p>
-          </div>
-          <h3 className="text-lg mb-2">
-            <strong>Product Quantity:</strong> {showImage.quantity}
-          </h3>
-          <h3 className="text-lg mb-2">
-            <strong>Unit:</strong>{" "}
-            {showImage.unit ? showImage.unit : "Not Available"}
-          </h3>
-          {showImage.is_for_sale ? (
-            <>
-              <h3 className="text-lg mb-2">
-                <strong>For Sale</strong>
-              </h3>
-              <h3 className="text-lg mb-2">
-                <strong>Price:</strong> {showImage.price} USD
-              </h3>
-            </>
-          ) : (
-            <h3 className="text-lg mb-2">
-              <strong>Not For Sale</strong>
-            </h3>
-          )}
+        <div className="flex items-center mb-8">
+          <strong className="text-lg">Description : </strong>
+          <p className="text-lg ml-2 capitalize">
+            {showImage.description ? showImage.description : "Not Available"}
+          </p>
         </div>
+
+        <div className="flex items-center mb-8">
+          <strong className="text-lg">Medium / Material : </strong>
+          <p className="text-lg ml-2capitalize">
+            {showImage.medium ? showImage.medium : "Not Available"}
+          </p>
+        </div>
+
+        <div className="flex items-center mb-8">
+          <strong className="text-lg">Image Created On : &nbsp;</strong>
+          <p className="text-lg">
+            {new Date(showImage.created_at).toLocaleDateString("en-US", {
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+            })}
+          </p>
+        </div>
+
+        {showImage.is_for_sale ? (
+          <>
+            <div className="mb-4">
+              <strong className="text-lg">For Sale: </strong>
+              <p className="text-lg">
+                <strong>Price: </strong>
+                {showImage.price} USD
+              </p>
+            </div>
+          </>
+        ) : (
+          <p className="text-lg mb-4">
+            <strong>Not For Sale</strong>
+          </p>
+        )}
 
         <div className="flex justify-end space-x-4">
           <button className="bg-green-300 hover:bg-green-100 text-xl font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline shadow-green-500/50 border shadow-md">
@@ -122,7 +109,7 @@ function PortraitDetails() {
         </div>
       </div>
 
-      <div className="p-6 m-6 rounded-lg shadow-green-500/50 border shadow-lg relative flex justify-center">
+      <div className="p-6 m-6 bg-white rounded-lg shadow-lg relative">
         {showImage.image_url ? (
           <div>
             <img
