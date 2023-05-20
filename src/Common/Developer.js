@@ -14,9 +14,9 @@ function Developer() {
   ];
 
   return (
-    <div className="mx-6 px-4 py-10 rounded-lg bg-gray-100 shadow-md">
+    <div className="mx-auto px-4 py-10 bg-gray-100 rounded-lg shadow-md">
       <h1 className="text-3xl font-bold tracking-wide text-gray-900 mb-8 text-center">
-        About Artistic Universe Developer
+        About the Artistic Universe Developer
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
         {developers.map((developer, index) => (
@@ -34,7 +34,7 @@ function Developer() {
                 <h2 className="font-bold text-2xl mb-2">{developer.name}</h2>
                 <p className="text-gray-800 text-base max-w-md mb-4">
                   <span className="font-bold text-xl px-2 py-1 rounded mr-2">
-                    About me:
+                    About Me:
                   </span>
                   {developer.bio}
                 </p>
@@ -46,7 +46,7 @@ function Developer() {
                 </p>
                 <p className="text-gray-800 text-base max-w-md mb-4">
                   <span className="font-bold text-xl px-2 py-1 rounded mr-2">
-                    Fun fact:
+                    Fun Fact:
                   </span>
                   {developer.funFact}
                 </p>
@@ -55,7 +55,7 @@ function Developer() {
                 <a
                   href={developer.github}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="text-gray-500 hover:text-gray-900 mr-4"
                 >
                   <i className="fab fa-github fa-2x"></i>
@@ -63,7 +63,7 @@ function Developer() {
                 <a
                   href={developer.linkedin}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="text-gray-500 hover:text-gray-900"
                 >
                   <i className="fab fa-linkedin-in fa-2x"></i>
