@@ -9,23 +9,23 @@ function Developer() {
       hobbies: "I love traveling and gardening.",
       github: "https://github.com/Vandhana-Mohan",
       linkedin: "https://www.linkedin.com/in/vandhanamohan/",
-      funFact: "I am scared of pets.",
+      funFact: "I am scared of doctors.",
     },
   ];
 
   return (
-    <div className="mx-auto px-4 py-10 rounded-lg shadow-red-500/50 shadow-lg">
-      <h1 className="text-3xl font-bold tracking-wide text-gray-900 mb-8">
-        About FreshPick Developer
+    <div className="mx-6 px-4 py-10 rounded-lg bg-gray-100 shadow-md">
+      <h1 className="text-3xl font-bold tracking-wide text-gray-900 mb-8 text-center">
+        About Artistic Universe Developer
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 rounded-lg shadow-red-500/50 shadow-md">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
         {developers.map((developer, index) => (
           <div
             key={index}
             className="bg-white shadow-lg rounded-lg overflow-hidden flex"
           >
             <img
-              className="w-1/2 rounded-lg shadow-red-500/50 shadow-lg"
+              className="w-1/2 rounded-l-lg"
               src={developer.photo}
               alt={developer.name}
             />
@@ -33,13 +33,22 @@ function Developer() {
               <div>
                 <h2 className="font-bold text-2xl mb-2">{developer.name}</h2>
                 <p className="text-gray-800 text-base max-w-md mb-4">
-                  About me: {developer.bio}
+                  <span className="font-bold text-xl px-2 py-1 rounded mr-2">
+                    About me:
+                  </span>
+                  {developer.bio}
                 </p>
                 <p className="text-gray-800 text-base max-w-md mb-4">
-                  Hobbies: {developer.hobbies}
+                  <span className="font-bold text-xl  px-2 py-1 rounded mr-2">
+                    Hobbies:
+                  </span>
+                  {developer.hobbies}
                 </p>
                 <p className="text-gray-800 text-base max-w-md mb-4">
-                  Fun fact: {developer.funFact}
+                  <span className="font-bold text-xl px-2 py-1 rounded mr-2">
+                    Fun fact:
+                  </span>
+                  {developer.funFact}
                 </p>
               </div>
               <div className="flex justify-end">
