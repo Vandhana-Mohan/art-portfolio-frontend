@@ -37,7 +37,11 @@ function App() {
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/developers" element={<Developer />} />
             <Route path="/newsletter" element={<Newsletter />} />
-            <Route path="/art/:id/edit" element={<EditCollection />} />
+            <Route
+              path="/artworks/images/:id/edit"
+              element={<EditCollection />}
+            />
+
             <Route path="/art/newCollection" element={<NewCollection />} />
             <Route path="/art/newImage" element={<NewImage />} />
             <Route path="/art/:id" element={<Show />} />
