@@ -1,23 +1,23 @@
 import { Link } from "react-router-dom";
+import { HiDotsVertical } from "react-icons/hi";
 
 function Portrait({ portrait }) {
+  const handleMoreOptions = () => {};
+
   return (
-    <div
-      key={portrait.id}
-      className="rounded-lg shadow-red-500/50 border shadow-md overflow-hidden"
-    >
+    <div className="rounded-lg shadow-md border">
       <Link
         to={`/art/${portrait.id}`}
-        className="py-2 px-4 rounded-lg shadow-red-500/50 shadow-md w-max transition-colors duration-300"
+        className="block w-full h-60 rounded-lg overflow-hidden transition-colors duration-300 hover:bg-gray-100"
       >
         {portrait.image_url ? (
           <img
-            alt={portrait.name}
-            className="w-full h-60 object-cover"
+            alt={portrait.title}
+            className="w-full h-full object-cover"
             src={portrait.image_url}
           />
         ) : (
-          <div className="w-full h-60 bg-gray-200 flex items-center justify-center">
+          <div className="flex items-center justify-center w-full h-full bg-gray-200">
             <p className="text-gray-500 font-bold text-xl">
               No Image Available
             </p>
@@ -25,12 +25,21 @@ function Portrait({ portrait }) {
         )}
       </Link>
 
-      <div className="flex flex-wrap mb-4 justify-center">
+      <div className="flex justify-end p-2">
+        <button
+          className="text-gray-600 text-2xl hover:text-gray-800"
+          onClick={handleMoreOptions}
+        >
+          <HiDotsVertical />
+        </button>
+      </div>
+
+      <div className="flex justify-center p-2">
         <Link
           to={`/art/${portrait.id}`}
           className="text-blue-500 hover:underline"
         >
-          View Details
+          {portrait.title}
         </Link>
       </div>
     </div>

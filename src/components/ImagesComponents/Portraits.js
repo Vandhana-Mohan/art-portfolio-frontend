@@ -5,7 +5,7 @@ function Portraits() {
   const [portrait, setPortrait] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/artworks/collection`)
+    fetch(`${process.env.REACT_APP_API_URL}/artworks/images`)
       .then((response) => response.json())
       .then((data) => {
         setPortrait(data);

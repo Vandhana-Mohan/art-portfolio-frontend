@@ -14,7 +14,7 @@ function NavBar() {
         </li>
         <li className="mx-2 sm:mx-4 md:mx-8 lg:mx-16">
           <Link
-            to="/"
+            to="/index"
             className="text-white hover:text-gray-300 text-xl font-bold transition-colors duration-300"
           >
             My Collection

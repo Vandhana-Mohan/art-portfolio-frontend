@@ -1,22 +1,28 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-// import Reviews from "../components/Reviews";
 
-function GroceryDetails() {
+function PortraitDetails() {
   let { id } = useParams();
 
   let navigate = useNavigate();
 
-  const [showItem, setShowItem] = useState({
-    name: "",
-    category: "",
-    image_url: "",
+  // title VARCHAR(255) NOT NULL,
+  // price DECIMAL(10,2) DEFAULT 0 CHECK (price >= 0),
+  // is_for_sale BOOLEAN DEFAULT false,
+  // description TEXT,
+  // image_url TEXT NOT NULL,
+  // medium VARCHAR(255),
+  // created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+  const [showImage, setShowImage] = useState({
+    title: "",
+    price: 0,
+    is_for_sale: false,
     description: "",
-    price: "",
-    quantity: "",
-    unit: "",
-    is_organic: false,
+    image_url: "",
+    medium: "",
+    created_at: "",
   });
 
   useEffect(() => {
@@ -24,7 +30,7 @@ function GroceryDetails() {
       axios
         .get(`${process.env.REACT_APP_API_URL}/groceries/${id}`)
         .then((response) => {
-          setShowItem(response.data);
+          setShowImage(response.data);
         })
         .catch((error) => {
           console.log(error);
@@ -53,7 +59,7 @@ function GroceryDetails() {
         <div className="flex flex-col space-y-4 p-6 m-6">
           <h2 className="text-2xl font-bold mb-2">
             <strong>Name:</strong>{" "}
-            {showItem.name
+            {showImage.name
               .split(" ")
               .map((word) => word.slice(0, 1).toUpperCase() + word.slice(1))
               .join(" ")}
@@ -64,9 +70,9 @@ function GroceryDetails() {
               <strong>Product Description:</strong>
             </h3>
             <p className="text-lg mb-2">
-              {showItem.description
-                ? showItem.description.charAt(0).toUpperCase() +
-                  showItem.description.slice(1)
+              {showImage.description
+                ? showImage.description.charAt(0).toUpperCase() +
+                  showImage.description.slice(1)
                 : "Not Available"}
             </p>
           </div>
@@ -76,24 +82,24 @@ function GroceryDetails() {
               <strong>Category:</strong>
             </h3>
             <p className="text-lg mb-2">
-              {showItem.category
-                ? showItem.category.charAt(0).toUpperCase() +
-                  showItem.category.slice(1)
+              {showImage.category
+                ? showImage.category.charAt(0).toUpperCase() +
+                  showImage.category.slice(1)
                 : "Not Available"}
             </p>
           </div>
 
           <h3 className="text-lg mb-2">
-            <strong>Price:</strong> {showItem.price} USD
+            <strong>Price:</strong> {showImage.price} USD
           </h3>
           <h3 className="text-lg mb-2">
-            <strong>Product Quantity:</strong> {showItem.quantity}
+            <strong>Product Quantity:</strong> {showImage.quantity}
           </h3>
           <h3 className="text-lg mb-2">
             <strong>Unit:</strong>{" "}
-            {showItem.unit ? showItem.unit : "Not Available"}
+            {showImage.unit ? showImage.unit : "Not Available"}
           </h3>
-          {showItem.is_organic ? (
+          {showImage.is_organic ? (
             <h3 className="text-lg mb-2">
               <strong>Organic</strong>
             </h3>
@@ -120,20 +126,20 @@ function GroceryDetails() {
       </div>
 
       <div className="p-6 m-6 rounded-lg shadow-green-500/50 border shadow-lg relative flex justify-center">
-        {showItem.image_url ? (
+        {showImage.image_url ? (
           <div>
             <img
               className="w-full h-auto object-cover max-w-max max-h-full"
-              src={showItem.image_url}
-              alt={showItem.name}
+              src={showImage.image_url}
+              alt={showImage.name}
             />
 
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-75 transition duration-300">
                 <img
                   className="w-full h-full object-contain hover:scale-150 transition duration-300"
-                  src={showItem.image_url}
-                  alt={showItem.name}
+                  src={showImage.image_url}
+                  alt={showImage.name}
                 />
               </div>
             </div>
@@ -146,10 +152,8 @@ function GroceryDetails() {
           </div>
         )}
       </div>
-
-      {/* <Reviews /> */}
     </div>
   );
 }
 
-export default GroceryDetails;
+export default PortraitDetails;
