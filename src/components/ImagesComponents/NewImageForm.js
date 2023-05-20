@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function NewCollectionForm() {
+function NewImageForm() {
   let navigate = useNavigate();
 
   const [newPortrait, setNewPortrait] = useState({
@@ -22,7 +22,7 @@ function NewCollectionForm() {
   function handleSubmit(event) {
     event.preventDefault();
     axios
-      .post(`${process.env.REACT_APP_API_URL}/artworks/user`, newPortrait)
+      .post(`${process.env.REACT_APP_API_URL}/artworks/images`, newPortrait)
       .then(() => {
         navigate("/index");
       })
@@ -166,7 +166,7 @@ function NewCollectionForm() {
           </button>
           <button
             type="button"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/index")}
             className="bg-green-300 hover:bg-green-100 mt-4 text-xl font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline rounded-lg shadow-green-500/50 border shadow-md"
           >
             Cancel
@@ -184,4 +184,4 @@ function NewCollectionForm() {
   );
 }
 
-export default NewCollectionForm;
+export default NewImageForm;
