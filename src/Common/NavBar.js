@@ -30,7 +30,7 @@ function NavBar() {
         </li>
         <li className="mx-2 sm:mx-4 md:mx-8 lg:mx-16">
           <Link
-            to="/art/new"
+            to="/art/newImage"
             className="text-white hover:text-gray-300 text-xl font-bold transition-colors duration-300"
           >
             Add Image to Collection

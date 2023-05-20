@@ -19,6 +19,8 @@ import Index from "./pages/ImagesPages/Index";
 import NewCollection from "./pages/CollectionPages/NewCollection";
 import Show from "./pages/ImagesPages/Show";
 import NewUser from "./pages/UserPages/NewUser";
+import NewImage from "./pages/ImagesPages/NewImage";
+
 function App() {
   return (
     <div>
@@ -36,7 +38,8 @@ function App() {
             <Route path="/developers" element={<Developer />} />
             <Route path="/newsletter" element={<Newsletter />} />
             <Route path="/art/:id/edit" element={<EditCollection />} />
-            <Route path="/art/new" element={<NewCollection />} />
+            <Route path="/art/newCollection" element={<NewCollection />} />
+            <Route path="/art/newImage" element={<NewImage />} />
             <Route path="/art/:id" element={<Show />} />
             {/* <Route path="/art/search/:id" element={<ShowSearch />} /> */}
             {/* <Route path="/categories" element={<CategoriesIndex />} /> */}
