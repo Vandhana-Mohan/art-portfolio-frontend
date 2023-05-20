@@ -1,8 +1,13 @@
-import { Link } from "react-router-dom";
 import { HiDotsVertical } from "react-icons/hi";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Portrait({ portrait }) {
-  const handleMoreOptions = () => {};
+  const [showOptions, setShowOptions] = useState(false);
+
+  const handleMoreOptions = () => {
+    setShowOptions(!showOptions);
+  };
 
   return (
     <div className="rounded-lg shadow-md border">
@@ -25,13 +30,22 @@ function Portrait({ portrait }) {
         )}
       </Link>
 
-      <div className="flex justify-end p-2">
+      <div className="flex justify-end p-2 relative">
         <button
-          className="text-gray-600 text-2xl hover:text-gray-800"
+          className="text-black-600 text-2xl hover:text-gray-800"
           onClick={handleMoreOptions}
         >
           <HiDotsVertical />
         </button>
+        {showOptions && (
+          <div className="absolute right-0 mt-2 bg-white rounded-lg shadow-md">
+            <ul className="py-2">
+              <li className="px-4 py-2 hover:bg-gray-100">Edit</li>
+              <li className="px-4 py-2 hover:bg-gray-100">View</li>
+              <li className="px-4 py-2 hover:bg-gray-100">Delete</li>
+            </ul>
+          </div>
+        )}
       </div>
 
       <div className="flex justify-center p-2">

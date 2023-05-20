@@ -1,19 +1,13 @@
 import { useEffect, useState } from "react";
+
 import { Link, useNavigate, useParams } from "react-router-dom";
+
 import axios from "axios";
 
 function PortraitDetails() {
   let { id } = useParams();
 
   let navigate = useNavigate();
-
-  // title VARCHAR(255) NOT NULL,
-  // price DECIMAL(10,2) DEFAULT 0 CHECK (price >= 0),
-  // is_for_sale BOOLEAN DEFAULT false,
-  // description TEXT,
-  // image_url TEXT NOT NULL,
-  // medium VARCHAR(255),
-  // created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 
   const [showImage, setShowImage] = useState({
     title: "",
@@ -28,7 +22,7 @@ function PortraitDetails() {
   useEffect(() => {
     if (id) {
       axios
-        .get(`${process.env.REACT_APP_API_URL}/groceries/${id}`)
+        .get(`${process.env.REACT_APP_API_URL}/artworks/images/${id}`)
         .then((response) => {
           setShowImage(response.data);
         })
@@ -41,7 +35,7 @@ function PortraitDetails() {
 
   function handleDelete() {
     if (window.confirm("Are you sure you want to delete this item ? ")) {
-      fetch(`${process.env.REACT_APP_API_URL}/groceries/${id}`, {
+      fetch(`${process.env.REACT_APP_API_URL}/artworks/images/${id}`, {
         method: "DELETE",
       })
         .then(() => {
@@ -53,13 +47,14 @@ function PortraitDetails() {
         });
     }
   }
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div className="flex flex-col justify-between">
         <div className="flex flex-col space-y-4 p-6 m-6">
           <h2 className="text-2xl font-bold mb-2">
-            <strong>Name:</strong>{" "}
-            {showImage.name
+            <strong>Title:</strong>{" "}
+            {showImage.title
               .split(" ")
               .map((word) => word.slice(0, 1).toUpperCase() + word.slice(1))
               .join(" ")}
@@ -67,7 +62,7 @@ function PortraitDetails() {
 
           <div className="flex items-center space-x-2">
             <h3 className="text-lg mb-2">
-              <strong>Product Description:</strong>
+              <strong>Description:</strong>
             </h3>
             <p className="text-lg mb-2">
               {showImage.description
@@ -79,19 +74,15 @@ function PortraitDetails() {
 
           <div className="flex items-center space-x-2">
             <h3 className="text-lg mb-2">
-              <strong>Category:</strong>
+              <strong>Medium / Material :</strong>
             </h3>
             <p className="text-lg mb-2">
-              {showImage.category
-                ? showImage.category.charAt(0).toUpperCase() +
-                  showImage.category.slice(1)
+              {showImage.medium
+                ? showImage.medium.charAt(0).toUpperCase() +
+                  showImage.medium.slice(1)
                 : "Not Available"}
             </p>
           </div>
-
-          <h3 className="text-lg mb-2">
-            <strong>Price:</strong> {showImage.price} USD
-          </h3>
           <h3 className="text-lg mb-2">
             <strong>Product Quantity:</strong> {showImage.quantity}
           </h3>
@@ -99,22 +90,28 @@ function PortraitDetails() {
             <strong>Unit:</strong>{" "}
             {showImage.unit ? showImage.unit : "Not Available"}
           </h3>
-          {showImage.is_organic ? (
-            <h3 className="text-lg mb-2">
-              <strong>Organic</strong>
-            </h3>
+          {showImage.is_for_sale ? (
+            <>
+              <h3 className="text-lg mb-2">
+                <strong>For Sale</strong>
+              </h3>
+              <h3 className="text-lg mb-2">
+                <strong>Price:</strong> {showImage.price} USD
+              </h3>
+            </>
           ) : (
             <h3 className="text-lg mb-2">
-              <strong>Not Organic</strong>
+              <strong>Not For Sale</strong>
             </h3>
           )}
         </div>
+
         <div className="flex justify-end space-x-4">
           <button className="bg-green-300 hover:bg-green-100 text-xl font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline shadow-green-500/50 border shadow-md">
-            <Link to="/">Back</Link>
+            <Link to="/index">Back</Link>
           </button>
           <button className="bg-green-300 hover:bg-green-100 text-xl font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline shadow-green-500/50 border shadow-md">
-            <Link to={`/groceries/${id}/edit`}>Edit</Link>
+            <Link to={`/artworks/images/${id}/edit`}>Edit</Link>
           </button>
           <button
             className="bg-green-300 hover:bg-green-100 text-xl font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline shadow-green-500/50 border shadow-md"
@@ -131,7 +128,7 @@ function PortraitDetails() {
             <img
               className="w-full h-auto object-cover max-w-max max-h-full"
               src={showImage.image_url}
-              alt={showImage.name}
+              alt={showImage.title}
             />
 
             <div className="absolute inset-0 flex items-center justify-center">
@@ -139,7 +136,7 @@ function PortraitDetails() {
                 <img
                   className="w-full h-full object-contain hover:scale-150 transition duration-300"
                   src={showImage.image_url}
-                  alt={showImage.name}
+                  alt={showImage.title}
                 />
               </div>
             </div>
