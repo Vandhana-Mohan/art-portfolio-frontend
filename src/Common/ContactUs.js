@@ -7,7 +7,7 @@ function ContactUs() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`Thank you for your message, ${name}! We will get back to you soon.`);
+    alert(`Thank you ${name} for your message! We will get back to you soon.`);
     setName("");
     setEmail("");
     setMessage("");

@@ -51,7 +51,7 @@ function Portrait({ portrait }) {
       <div className="flex justify-center p-2">
         <Link
           to={`/art/${portrait.id}`}
-          className="text-blue-500 hover:underline"
+          className="text-blue-500 font-bold text-xl capitalize hover:underline"
         >
           {portrait.title}
         </Link>

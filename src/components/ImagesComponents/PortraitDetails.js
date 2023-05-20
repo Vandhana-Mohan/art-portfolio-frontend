@@ -46,7 +46,7 @@ function PortraitDetails() {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
       <div className="p-6 m-6 bg-white rounded-lg shadow-md">
         <h2 className="text-2xl font-bold text-center mb-8 capitalize">
           {showImage.title}
