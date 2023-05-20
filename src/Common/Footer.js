@@ -30,27 +30,14 @@ function Footer() {
                   Contact Us
                 </Link>
               </li>
-              <form>
-                <div className="flex items-center space-x-2 w-full">
-                  <input
-                    type="email"
-                    title="Enter Email"
-                    placeholder="Enter Email: JohnDoe@gmail.com"
-                    className="border border-gray-400 px-4 py-2 rounded-lg focus:outline-none focus:ring focus:border-red-500"
-                  />
-                  <button
-                    type="submit"
-                    className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg"
-                  >
-                    <Link
-                      className="text-red-600 text-lg hover:text-red-700 hover:underline"
-                      to="/signUp"
-                    >
-                      Sign Up
-                    </Link>
-                  </button>
-                </div>
-              </form>
+              <li>
+                <Link
+                  to="/newsletter"
+                  className="text-gray-700 hover:text-red-700 hover:underline"
+                >
+                  Subscribe to our Newsletter
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="text-base sm:text-lg">

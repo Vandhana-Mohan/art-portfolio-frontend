@@ -7,7 +7,7 @@ function CarouselComponent() {
   const [slidesToShow, setSlidesToShow] = useState(3); // Number of slides to show
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/artworks/image`)
+    fetch(`${process.env.REACT_APP_API_URL}/artworks/images`)
       .then((response) => response.json())
       .then((data) => {
         setImages(data);
@@ -57,7 +57,7 @@ function CarouselComponent() {
             <img
               src={item.image_url}
               alt={item.title}
-              className="w-full h-auto object-cover"
+              className="w-full h-96 object-cover"
             />
           </div>
         ))}

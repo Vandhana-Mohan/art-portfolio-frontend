@@ -9,6 +9,7 @@ import FilterButtons from "./Common/FilterButtons";
 import Footer from "./Common/Footer";
 import Header from "./Common/Header";
 import NavBar from "./Common/NavBar";
+import Newsletter from "./Common/NewsLetter";
 
 // Pages
 import FourOFour from "./pages/FourOFour";
@@ -33,6 +34,7 @@ function App() {
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/developers" element={<Developer />} />
+            <Route path="/newsletter" element={<Newsletter />} />
             <Route path="/art/:id/edit" element={<EditCollection />} />
             <Route path="/art/new" element={<NewCollection />} />
             <Route path="/art/:id" element={<Show />} />
