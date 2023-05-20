@@ -98,7 +98,7 @@ function PortraitDetails() {
             <Link to="/index">Back</Link>
           </button>
           <button className="bg-green-300 hover:bg-green-100 text-xl font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline shadow-green-500/50 border shadow-md">
-            <Link to={`/artworks/images/${id}/edit`}>Edit</Link>
+            <Link to={`/art/images/${id}/edit`}>Edit</Link>
           </button>
           <button
             className="bg-green-300 hover:bg-green-100 text-xl font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline shadow-green-500/50 border shadow-md"

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function NewCollectionForm() {
+  /*
   let navigate = useNavigate();
 
   const [newPortrait, setNewPortrait] = useState({
@@ -210,6 +211,8 @@ function NewCollectionForm() {
       </form>
     </div>
   );
+  */
+  return null;
 }
 
 export default NewCollectionForm;

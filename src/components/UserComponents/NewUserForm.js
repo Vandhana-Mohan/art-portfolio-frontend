@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function NewUserForm() {
+  /*
   let navigate = useNavigate();
 
   const [newUser, setNewUser] = useState({
@@ -34,6 +35,7 @@ function NewUserForm() {
     setNewUser({ ...newUser, [event.target.id]: event.target.value });
   }
 
+ 
   return (
     <div className="p-6 m-6">
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -210,6 +212,8 @@ function NewUserForm() {
       </form>
     </div>
   );
+  */
+  return null;
 }
 
 export default NewUserForm;

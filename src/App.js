@@ -14,11 +14,9 @@ import Newsletter from "./Common/NewsLetter";
 // Pages
 import FourOFour from "./pages/FourOFour";
 import Home from "./pages/Home";
-import EditCollection from "./pages/CollectionPages/EditCollection";
+import EditImage from "./pages/ImagesPages/EditImage";
 import Index from "./pages/ImagesPages/Index";
-import NewCollection from "./pages/CollectionPages/NewCollection";
 import Show from "./pages/ImagesPages/Show";
-import NewUser from "./pages/UserPages/NewUser";
 import NewImage from "./pages/ImagesPages/NewImage";
 
 function App() {
@@ -32,17 +30,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/index" element={<Index />} />
-            <Route path="/signUp" element={<NewUser />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/developers" element={<Developer />} />
             <Route path="/newsletter" element={<Newsletter />} />
-            <Route
-              path="/artworks/images/:id/edit"
-              element={<EditCollection />}
-            />
-
-            <Route path="/art/newCollection" element={<NewCollection />} />
+            <Route path="/art/images/:id/edit" element={<EditImage />} />
+            <Route path="/art/newCollection" element={<NewImage />} />
             <Route path="/art/newImage" element={<NewImage />} />
             <Route path="/art/:id" element={<Show />} />
             {/* <Route path="/art/search/:id" element={<ShowSearch />} /> */}

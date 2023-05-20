@@ -3,9 +3,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function PortraitEditForm() {
+  /*
   let { id } = useParams();
   let navigate = useNavigate();
-
+  
   const [editPortrait, setEditPortrait] = useState({
     name: "",
     category: "",
@@ -16,34 +17,6 @@ function PortraitEditForm() {
     unit: "",
     is_organic: false,
   });
-
-  const unitOptions = [
-    "lbs",
-    "oz",
-    "g",
-    "kg",
-    "pt",
-    "qt",
-    "gal",
-    "doz",
-    "pack",
-  ];
-
-  const [categories, setCategories] = useState([
-    "Fruits",
-    "Vegetables",
-    "Bakery",
-    "Meat",
-    "Dairy",
-    "Canned goods",
-    "Beverages",
-    "Snacks",
-    "Frozen foods",
-    "Grains",
-    "Condiments",
-    "Baking supplies",
-    "Household items",
-  ]);
 
   function handleTextChange(event) {
     setEditPortrait({ ...editPortrait, [event.target.id]: event.target.value });
@@ -276,6 +249,8 @@ function PortraitEditForm() {
       </form>
     </div>
   );
+  */
+  return null;
 }
 
 export default PortraitEditForm;
