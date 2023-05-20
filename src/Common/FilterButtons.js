@@ -45,10 +45,6 @@ export default FilterButtons;
 
 /*
 
-
-  
-}
-
 .search-option-button:hover {
   background-color: rgba(227, 226, 227);
   box-shadow: 2px 2px 8px 4px grey;
