@@ -1,4 +1,18 @@
 import { Link } from "react-router-dom";
+
+function SocialMediaIconLink({ url, iconClassName }) {
+  return (
+    <Link
+      to={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-500 hover:text-red-700 transition duration-300"
+    >
+      <i className={iconClassName + " text-4xl"}></i>
+    </Link>
+  );
+}
+
 function Footer() {
   return (
     <footer className="bg-gray-100">
@@ -86,7 +100,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="/forgot-password"
+                  to="/help"
                   className="text-gray-700 hover:text-red-700 hover:underline"
                 >
                   Forgot Password
@@ -94,7 +108,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="/faq"
+                  to="/help"
                   className="text-gray-700 hover:text-red-700 hover:underline"
                 >
                   FAQ
@@ -102,7 +116,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="/help-support"
+                  to="/help"
                   className="text-gray-700 hover:text-red-700 hover:underline"
                 >
                   Help & Support
@@ -118,16 +132,5 @@ function Footer() {
     </footer>
   );
 }
-function SocialMediaIconLink({ url, iconClassName }) {
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-gray-500 hover:text-red-700 transition duration-300"
-    >
-      <i className={iconClassName + " text-2xl"}></i>
-    </a>
-  );
-}
+
 export default Footer;

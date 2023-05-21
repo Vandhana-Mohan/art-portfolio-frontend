@@ -10,6 +10,7 @@ import Footer from "./Common/Footer";
 import Header from "./Common/Header";
 import NavBar from "./Common/NavBar";
 import Newsletter from "./Common/NewsLetter";
+import Help from "./Common/Help";
 import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignUp";
 import AuthDetails from "./components/AuthDetails";
@@ -45,6 +46,7 @@ function App() {
             <Route path="/art/:id" element={<Show />} />
             {/* <Route path="/art/search/:id" element={<ShowSearch />} /> */}
             {/* <Route path="/categories" element={<CategoriesIndex />} /> */}
+            <Route path="/help" element={<Help />} />
             <Route path="*" element={<FourOFour />} />
           </Routes>
         </main>
