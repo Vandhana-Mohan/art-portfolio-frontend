@@ -16,11 +16,14 @@ function ContactUs() {
   };
 
   return (
-    <div className="max-w-sm mx-auto border p-6 rounded-lg shadow-red-500/50 border shadow-md">
-      <h1 className="text-3xl font-bold tracking-wide mb-4">Contact Us</h1>
+    <div className="mx-auto px-4 py-10 max-w-lg rounded-lg shadow-lg shadow-red-500/50 border shadow-md">
+      <h1 className="text-4xl font-bold tracking-wide text-gray-900 text-center">
+        Contact Us
+      </h1>
+      <br />
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
+          <label className="block text-gray-700 text-xl font-bold mb-2" htmlFor="name">
             Name
           </label>
           <input
@@ -34,7 +37,7 @@ function ContactUs() {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
+          <label className="block text-gray-700 text-xl font-bold mb-2" htmlFor="email">
             Email
           </label>
           <input
@@ -49,7 +52,7 @@ function ContactUs() {
         </div>
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="block text-gray-700 text-xl font-bold mb-2"
             htmlFor="message"
           >
             Message
@@ -64,9 +67,10 @@ function ContactUs() {
             required
           />
         </div>
-        <div className="flex justify-end">
+
+        <div className="flex">
           <button
-            className="bg-red-300 hover:bg-red-100 text-xl font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline rounded-lg shadow-red-500/50 border shadow-md"
+            className="mt-10 mx-auto bg-red-500 hover:bg-red-300 text-white text-2xl font-bold py-3 px-6 rounded-lg shadow-md"
             type="submit"
           >
             Send

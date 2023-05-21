@@ -8,6 +8,7 @@ function PortraitDetails() {
 
   const [showImage, setShowImage] = useState({
     title: "",
+    theme: "",
     price: 0,
     is_for_sale: false,
     description: "",
@@ -51,6 +52,13 @@ function PortraitDetails() {
         <h2 className="text-2xl font-bold text-center mb-8 capitalize">
           {showImage.title}
         </h2>
+
+        <div className="flex items-center mb-8">
+          <strong className="text-lg">Theme : </strong>
+          <p className="text-lg ml-2 capitalize">
+            {showImage.theme ? showImage.theme : "All"}
+          </p>
+        </div>
 
         <div className="flex items-center mb-8">
           <strong className="text-lg">Description : </strong>

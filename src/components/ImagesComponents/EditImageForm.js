@@ -8,6 +8,7 @@ function EditImageForm() {
 
   const [editPortrait, setEditPortrait] = useState({
     title: "",
+    theme: "",
     price: 0,
     is_for_sale: false,
     description: "",
@@ -15,6 +16,39 @@ function EditImageForm() {
     medium: "",
     created_at: "",
   });
+
+  const [theme, setTheme] = useState([
+    "Art",
+    "Creative Direction",
+    "Design",
+    "Designer",
+    "Graphic Design",
+    "Illustration",
+    "Marketing",
+    "Sports",
+    "Photography",
+    "Architecture",
+    "Fashion",
+  ]);
+
+  function handleThemeChange(event) {
+    const { value } = event.target;
+    if (value === "addTheme") {
+      const newTheme = prompt("Enter the theme:");
+      if (newTheme) {
+        setTheme([...theme, newTheme]);
+        setEditPortrait((prev) => ({
+          ...prev,
+          theme: newTheme,
+        }));
+      }
+    } else {
+      setEditPortrait((prev) => ({
+        ...prev,
+        theme: value,
+      }));
+    }
+  }
 
   function handleTextChange(event) {
     setEditPortrait({ ...editPortrait, [event.target.id]: event.target.value });
@@ -88,6 +122,27 @@ function EditImageForm() {
             value={editPortrait.description}
             className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
           />
+        </div>
+
+        <div className="flex flex-col w-3/4">
+          <label htmlFor="theme" className="mb-1 font-medium text-gray-700">
+            Theme : (Optional)
+          </label>
+          <select
+            id="theme"
+            value={editPortrait.theme}
+            title="Choose theme - optional"
+            onChange={handleThemeChange}
+            className="border border-gray-300 rounded-md px-3 py-2 relative bg-white shadow outline-none focus:outline-none focus:ring lg:w-3/4"
+          >
+            <option value="">-- Choose a theme --</option>
+            {theme.map((theme) => (
+              <option key={theme} value={theme}>
+                {theme}
+              </option>
+            ))}
+            <option value="addTheme">Add new theme</option>
+          </select>
         </div>
 
         <div className="flex flex-col w-3/4">

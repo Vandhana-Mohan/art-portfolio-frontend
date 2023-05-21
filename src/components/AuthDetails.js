@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { auth } from "../firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { FaUser } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 
 function AuthDetails() {
+  const navigate = useNavigate();
   const [authUser, setAuthUser] = useState(null);
 
   useEffect(() => {
@@ -19,14 +21,17 @@ function AuthDetails() {
       listen();
     };
   }, []);
+
   const userSignOut = () => {
-    signOut(auth)
-      .then(() => {
-        console.log("Signed Out Successfully");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (window.confirm("Are you sure you want to sign out?")) {
+      signOut(auth)
+        .then(() => {
+          navigate("/");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   };
   return (
     <div>
@@ -43,7 +48,28 @@ function AuthDetails() {
           </button>
         </div>
       ) : (
-        <p>Signed out successfully!</p>
+        <>
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-center">
+            <FaUser className="text-red text-3xl sm:text-4xl animate-pulse mb-2 mr-2" />
+
+            <div className="text-red-600 text-lg">
+              <Link
+                to="/SignIn"
+                className="text-red-600 text-lg hover:text-red-700 hover:underline"
+              >
+                Already a member? Log In
+              </Link>
+            </div>
+            <div className="text-red-600 text-lg">
+              <Link
+                className="text-red-600 text-lg hover:text-red-700 hover:underline"
+                to="/SignUp"
+              >
+                Sign Up
+              </Link>
+            </div>
+          </div>
+        </>
       )}
     </div>
   );
