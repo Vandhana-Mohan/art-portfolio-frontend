@@ -12,6 +12,7 @@ import NavBar from "./Common/NavBar";
 import Newsletter from "./Common/NewsLetter";
 import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignUp";
+import AuthDetails from "./components/AuthDetails";
 
 // Pages
 import FourOFour from "./pages/FourOFour";
@@ -28,6 +29,7 @@ function App() {
         <Header />
         <SignIn />
         <SignUp />
+        <AuthDetails />
         <NavBar />
         <FilterButtons />
         <main>
