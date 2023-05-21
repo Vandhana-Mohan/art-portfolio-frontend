@@ -1,6 +1,6 @@
 function FilterButtons() {
   return (
-    <div className="flex flex-wrap items-center p-6 m-6">
+    <div className="flex flex-wrap items-center p-4 m-4">
       <h2 className="mr-2 text-black text-2xl font-bold py-2 px-4 rounded-lg">
         Filter:
       </h2>

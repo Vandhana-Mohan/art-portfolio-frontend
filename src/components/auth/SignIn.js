@@ -13,7 +13,7 @@ function SignIn() {
     event.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        console.log(userCredential);
+        navigate("/index");
       })
       .catch((error) => {
         console.log(error);
@@ -26,7 +26,7 @@ function SignIn() {
   }
 
   return (
-    <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
+    <div className="relative flex flex-col justify-center overflow-hidden">
       <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
         <h1 className="text-3xl font-semibold text-center text-purple-700 uppercase">
           Sign in

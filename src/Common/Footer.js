@@ -41,49 +41,27 @@ function Footer() {
             </ul>
           </div>
           <div className="text-base sm:text-lg">
-            <h3 className="text-gray-700 font-bold mb-4 text-2xl underline">Connect With Our Social Media</h3>
-            <ul className="space-y-4 text-center">
+            <h3 className="text-gray-700 font-bold mb-8 text-2xl underline">
+              Connect With Our Social Media
+            </h3>
+            <ul className="flex justify-center space-x-16">
               <li>
                 <SocialMediaIconLink
-                  url="https://facebook.com/"
-                  iconClassName="fab fa-facebook-square"
-                />{" "} &nbsp;
-                Facebook
-              </li>
-              <li>
-                <SocialMediaIconLink
-                  url="https://instagram.com/"
-                  iconClassName="fab fa-instagram"
-                />{" "} &nbsp;
-                Instagram
-              </li>
-              <li>
-                <SocialMediaIconLink
-                  url="https://twitter.com/"
-                  iconClassName="fab fa-twitter-square"
-                />{" "} &nbsp;
-                Twitter
-              </li>
-              <li>
-                <SocialMediaIconLink
-                  url="https://youtube.com/"
+                  url="https://youtu.be/h_LOM5UPOpY"
                   iconClassName="fab fa-youtube"
-                />{" "} &nbsp;
-                YouTube
+                />
               </li>
               <li>
                 <SocialMediaIconLink
                   url="https://github.com/Vandhana-Mohan"
                   iconClassName="fab fa-github"
-                />{" "} &nbsp;
-                GitHub
+                />
               </li>
               <li>
                 <SocialMediaIconLink
                   url="https://www.linkedin.com/in/vandhanamohan/"
                   iconClassName="fab fa-linkedin"
-                />{" "} &nbsp;
-                LinkedIn
+                />
               </li>
             </ul>
           </div>

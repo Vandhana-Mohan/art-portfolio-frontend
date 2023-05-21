@@ -15,12 +15,11 @@ function SignUp() {
   function signUp(event) {
     event.preventDefault();
     if (password !== confirmPassword) {
-      console.log("Passwords do not match");
+      window.alert("Passwords do not match");
       return;
     }
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        console.log(userCredential);
         navigate("/index");
       })
       .catch((error) => {
@@ -29,7 +28,7 @@ function SignUp() {
   }
 
   return (
-    <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
+    <div className="relative flex flex-col justify-center overflow-hidden">
       <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
         <h1 className="text-3xl font-semibold text-center text-purple-700 uppercase">
           Create Account

@@ -22,8 +22,3 @@ const provider = new GoogleAuthProvider();
 
 // Initialize Firebase Authentication and get a reference to the service
 export { auth, provider };
-
-/*
-
-
-*/
