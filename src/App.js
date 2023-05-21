@@ -10,6 +10,7 @@ import Footer from "./Common/Footer";
 import Header from "./Common/Header";
 import NavBar from "./Common/NavBar";
 import Newsletter from "./Common/NewsLetter";
+import SignIn from "./components/auth/SignIn";
 
 // Pages
 import FourOFour from "./pages/FourOFour";
@@ -24,6 +25,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Header />
+        <SignIn />
         <NavBar />
         <FilterButtons />
         <main>
