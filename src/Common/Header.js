@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Art_Logo from "../assets/Art_Logo.png";
+import AuthDetails from "../components/AuthDetails";
 
 function Header() {
   return (
@@ -30,29 +31,21 @@ function Header() {
         </Link>
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-center">
           <i className="fa fa-user fa-2x sm:fa-3x animate-pulse mb-2 mr-2 text-red"></i>
-          <div className="text-red-600 text-lg">Already a member? Log In</div>
+          <div className="text-red-600 text-lg">
+            <Link
+              to="/SignIn"
+              className="text-red-600 text-lg hover:text-red-700 hover:underline"
+            >
+              Already a member? Log In
+            </Link>
+          </div>
+          <AuthDetails />
           <div className="text-red-600 text-lg">
             <Link
               className="text-red-600 text-lg hover:text-red-700 hover:underline"
-              to="/signUp"
+              to="/SignUp"
             >
               Sign Up
-            </Link>
-          </div>
-          <div>
-            <Link
-              className="text-red-600 text-lg hover:text-red-700 hover:underline"
-              to="/about"
-            >
-              About Us
-            </Link>
-          </div>
-          <div>
-            <Link
-              className="text-red-600 text-lg hover:text-red-700 hover:underline"
-              to="/contact"
-            >
-              Contact Us
             </Link>
           </div>
         </div>

@@ -27,14 +27,13 @@ function App() {
     <div>
       <BrowserRouter>
         <Header />
-        <SignIn />
-        <SignUp />
-        <AuthDetails />
         <NavBar />
         <FilterButtons />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/SignIn" element={<SignIn />} />
+            <Route path="/SignUp" element={<SignUp />} />
             <Route path="/index" element={<Index />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />

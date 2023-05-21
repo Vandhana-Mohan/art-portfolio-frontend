@@ -41,48 +41,48 @@ function Footer() {
             </ul>
           </div>
           <div className="text-base sm:text-lg">
-            <h3 className="text-gray-700 font-bold mb-4">Social Media</h3>
-            <ul className="space-y-4">
+            <h3 className="text-gray-700 font-bold mb-4 text-2xl underline">Connect With Our Social Media</h3>
+            <ul className="space-y-4 text-center">
               <li>
                 <SocialMediaIconLink
                   url="https://facebook.com/"
                   iconClassName="fab fa-facebook-square"
-                />{" "}
+                />{" "} &nbsp;
                 Facebook
               </li>
               <li>
                 <SocialMediaIconLink
                   url="https://instagram.com/"
                   iconClassName="fab fa-instagram"
-                />{" "}
+                />{" "} &nbsp;
                 Instagram
               </li>
               <li>
                 <SocialMediaIconLink
                   url="https://twitter.com/"
                   iconClassName="fab fa-twitter-square"
-                />{" "}
+                />{" "} &nbsp;
                 Twitter
               </li>
               <li>
                 <SocialMediaIconLink
                   url="https://youtube.com/"
                   iconClassName="fab fa-youtube"
-                />{" "}
+                />{" "} &nbsp;
                 YouTube
               </li>
               <li>
                 <SocialMediaIconLink
                   url="https://github.com/Vandhana-Mohan"
                   iconClassName="fab fa-github"
-                />{" "}
+                />{" "} &nbsp;
                 GitHub
               </li>
               <li>
                 <SocialMediaIconLink
                   url="https://www.linkedin.com/in/vandhanamohan/"
                   iconClassName="fab fa-linkedin"
-                />{" "}
+                />{" "} &nbsp;
                 LinkedIn
               </li>
             </ul>
@@ -92,7 +92,7 @@ function Footer() {
             <ul className="space-y-4">
               <li>
                 <Link
-                  to="/signup"
+                  to="/SignUp"
                   className="text-gray-700 hover:text-red-700 hover:underline"
                 >
                   Sign Up/Create Account
@@ -100,7 +100,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="/login"
+                  to="/SignIn"
                   className="text-gray-700 hover:text-red-700 hover:underline"
                 >
                   Log In

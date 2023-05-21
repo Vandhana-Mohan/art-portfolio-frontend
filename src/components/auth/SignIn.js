@@ -71,6 +71,10 @@ function SignIn() {
               onChange={(event) => setPassword(event.target.value)}
               title="Enter your password"
             />
+            <p className="text-xs">
+              {" "}
+              Use 8 or more characters with a mix of letters, numbers & symbols{" "}
+            </p>
           </div>
 
           <div className="mt-6">
