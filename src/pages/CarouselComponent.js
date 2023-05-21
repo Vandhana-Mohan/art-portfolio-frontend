@@ -11,7 +11,6 @@ function CarouselComponent() {
       .then((response) => response.json())
       .then((data) => {
         setImages(data);
-        console.log(data)
       })
       .catch((error) => {
         console.log(error);
@@ -53,7 +52,10 @@ function CarouselComponent() {
         centerSlidePercentage={100 / slidesToShow} // Adjust the center slide percentage based on the number of slides shown
       >
         {images.map((item) => (
-          <div key={item.id} className="carousel-item border border-red-600 border-8">
+          <div
+            key={item.id}
+            className="carousel-item border border-red-600 border-8"
+          >
             <img
               src={item.image_url}
               alt={item.title}

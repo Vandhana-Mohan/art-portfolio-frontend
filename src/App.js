@@ -11,6 +11,7 @@ import Header from "./Common/Header";
 import NavBar from "./Common/NavBar";
 import Newsletter from "./Common/NewsLetter";
 import SignIn from "./components/auth/SignIn";
+import SignUp from "./components/auth/SignUp";
 
 // Pages
 import FourOFour from "./pages/FourOFour";
@@ -26,6 +27,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <SignIn />
+        <SignUp />
         <NavBar />
         <FilterButtons />
         <main>
