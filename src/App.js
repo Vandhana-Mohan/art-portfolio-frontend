@@ -45,8 +45,8 @@ function App() {
             <Route path="/art/newCollection" element={<NewImage />} />
             <Route path="/art/newImage" element={<NewImage />} />
             <Route path="/art/:id" element={<Show />} />
-            {/* <Route path="/art/search/:id" element={<ShowSearch />} /> */}
-            {/* <Route path="/categories" element={<CategoriesIndex />} /> */}
+            {/* <Route path="/filter" element={<FilterButtons />} /> */}
+            <Route path="/filter/:theme" element={<FilterButtons />} />
             <Route path="/help" element={<Help />} />
             <Route path="*" element={<FourOFour />} />
           </Routes>

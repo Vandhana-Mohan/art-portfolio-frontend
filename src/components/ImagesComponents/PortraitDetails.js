@@ -8,7 +8,7 @@ function PortraitDetails() {
 
   const [showImage, setShowImage] = useState({
     title: "",
-    theme: "",
+    theme: "All",
     price: 0,
     is_for_sale: false,
     description: "",

@@ -61,7 +61,7 @@ function Footer() {
             <ul className="flex justify-center space-x-16">
               <li>
                 <SocialMediaIconLink
-                  url="https://youtu.be/h_LOM5UPOpY"
+                  url="https://www.youtube.com/@TheArtsyGirl4578"
                   iconClassName="fab fa-youtube"
                 />
               </li>
