@@ -1,9 +1,12 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
-import { auth } from "../../firebase";
-import { RiMailLine, RiLockPasswordLine } from "react-icons/ri";
+import { auth, provider } from "../../firebase";
+import { FaEnvelope, FaLock } from "react-icons/fa";
+import { signInWithRedirect } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 function SignIn() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -17,7 +20,10 @@ function SignIn() {
         console.log(error);
       });
   }
-
+  function google() {
+    signInWithRedirect(auth, provider);
+    navigate("/index");
+  }
   return (
     <div className="bg-red-100 p-8 rounded-lg">
       <div className="text-center">
@@ -74,6 +80,12 @@ function SignIn() {
             className="w-1/4 mt-4 px-4 py-4 font-bold text-xl text-white bg-indigo-600 rounded hover:bg-indigo-700"
           >
             Log In
+          </button>
+          <button
+            onClick={google}
+            className="w-1/4 mt-4 px-4 py-4 font-bold text-xl text-white bg-indigo-600 rounded hover:bg-indigo-700"
+          >
+            Sign In With Google
           </button>
         </div>
       </form>
