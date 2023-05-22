@@ -1,7 +1,6 @@
 // DEPENDENCIES
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 // Common
 import AboutUs from "./Common/AboutUs";
@@ -64,7 +63,7 @@ function App() {
             <Route path="/newsletter" element={<Newsletter />} />
             <Route path="/help" element={<Help />} />
             <Route path="*" element={<FourOFour />} />
-
+              
             {authUser ? (
               <>
                 <Route path="/index" element={<Index />} />
@@ -74,10 +73,10 @@ function App() {
                 <Route path="/filter/:theme" element={<FilterButtons />} />
               </>
             ) : (
-              <>
-                <Route
-                  path="/"
-                  element={
+              <Route
+                path="/auth"
+                element={() => (
+                  <React.Fragment>
                     <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-center">
                       <div className="p-6 m-6 rounded-lg shadow-red-500/50 border shadow-lg">
                         <h1 className="m-6 text-center text-4xl font-bold">
@@ -101,9 +100,10 @@ function App() {
                         </Link>
                       </div>
                     </div>
-                  }
-                />
-              </>
+                    <Navigate to="/auth" replace />
+                  </React.Fragment>
+                )}
+              />
             )}
           </Routes>
         </main>

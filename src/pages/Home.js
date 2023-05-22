@@ -1,27 +1,35 @@
+import { Link } from "react-router-dom";
 import CarouselComponent from "./CarouselComponent";
 
 function Home() {
   return (
     <div className="flex flex-col items-center bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 p-6">
-      <h1 className="text-4xl font-bold text-center mb-8 text-white">
-        A Boundless Canvas for Visionaries: A Haven for Creative Artistry
-      </h1>
-      <CarouselComponent />
-      <div className="text-center mt-8 bg-blue-300 w-full py-20">
-        <h1 className="text-6xl font-bold text-white tracking-wide">
-          Create your Online Portfolio
-        </h1>
-        <p className="text-white text-xl mt-4">
-          An easy-to-use portfolio builder to showcase your work
-        </p>
-        <button
-          type="button"
-          className="mt-6 px-8 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600"
-          data-te-ripple-init
-          data-te-ripple-color="light"
+      <div className="max-w-screen-xl">
+        <h1
+          className="text-5xl sm:text-4xl md:text-5xl font-bold tracking-wider text-center mb-8 text-white"
+          style={{ fontFamily: "'Alex Brush', cursive" }}
         >
-          Get Started Now &rarr;
-        </button>
+          A Boundless Canvas for Visionaries: A Haven for Creative Artistry
+        </h1>
+        <CarouselComponent />
+        <div className="text-center mt-8 p-8 w-full py-20">
+          <h1 className="text-6xl sm:text-2xl md:text-4xl font-bold text-white tracking-wide">
+            Create your Online Portfolio
+          </h1>
+          <p className="text-white text-xl md:text-lg sm:text-xl mt-4">
+            An easy-to-use portfolio builder to showcase your work
+          </p>
+          <Link to="/SignIn">
+            <button
+              type="button"
+              className="mt-6 px-8 py-4 text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+            >
+              Get Started Now &rarr;
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
