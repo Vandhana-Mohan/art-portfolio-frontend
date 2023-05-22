@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 
 function FilterTheme({ cat }) {
   return (
-    <div className="overflow-hidden bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
+    <div className="overflow-hidden bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg">
       <Link
         to={`/art/${cat.id}`}
-        className="py-2 px-4 w-max rounded-lg overflow-hidden transition-colors duration-300 bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500"
+        className="py-2 px-4 w-max rounded-lg overflow-hidden transition-colors duration-300 bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300"
       >
         {cat.image_url ? (
           <img
             src={cat.image_url}
             alt={cat.title}
-            className="w-full h-60 object-cover bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg"
+            className="w-full h-60 object-cover bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg"
           />
         ) : (
           <div className="w-full h-60 bg-gray-200 flex items-center justify-center">

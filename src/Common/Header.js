@@ -4,7 +4,7 @@ import AuthDetails from "../components/AuthDetails";
 
 function Header() {
   return (
-    <header className="bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500">
+    <header className="bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300">
       <div className="container mx-4 px-4 flex flex-col items-center justify-between sm:flex-row">
         <Link to="/">
           <div className="flex items-center text-3xl font-bold">

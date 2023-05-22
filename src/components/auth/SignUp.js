@@ -28,8 +28,8 @@ function SignUp() {
   }
 
   return (
-    <div className="relative flex flex-col justify-center bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg overflow-hidden">
-      <div className="w-full p-6 m-auto bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg lg:max-w-xl">
+    <div className="relative flex flex-col justify-center bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg overflow-hidden">
+      <div className="w-full p-6 m-auto bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg lg:max-w-xl">
         <h1 className="text-6xl sm:text-2xl md:text-4xl font-semibold text-center text-white uppercase tracking-wide mb-4">
           Create Account
         </h1>

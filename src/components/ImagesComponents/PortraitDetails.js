@@ -47,7 +47,7 @@ function PortraitDetails() {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300">
       <div className="p-6 m-6 rounded-lg shadow-yellow-500/50 shadow-lg">
         <h2 className="text-6xl sm:text-2xl md:text-4xl font-bold text-center mb-8 tracking-wide capitalize">
           {showImage.title}
@@ -149,7 +149,7 @@ function PortraitDetails() {
         </div>
       </div>
 
-      <div className="p-6 m-6 bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg relative">
+      <div className="p-6 m-6 bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg relative">
         {showImage.image_url ? (
           <div>
             <img
@@ -158,10 +158,10 @@ function PortraitDetails() {
               alt={showImage.title}
             />
 
-            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg bg-opacity-0 hover:bg-opacity-75 transition duration-300">
+            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg">
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg bg-opacity-0 hover:bg-opacity-75 transition duration-300">
                 <img
-                  className="w-full h-full object-contain bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg hover:scale-150 transition duration-300"
+                  className="w-full h-full object-contain bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg hover:scale-150 transition duration-300"
                   src={showImage.image_url}
                   alt={showImage.title}
                 />
@@ -169,7 +169,7 @@ function PortraitDetails() {
             </div>
           </div>
         ) : (
-          <div className="w-96 h-96 flex items-center justify-center bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
+          <div className="w-96 h-96 flex items-center justify-center bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg">
             <p className="text-white-500 font-bold text-xl text-center">
               No Image Available
             </p>
