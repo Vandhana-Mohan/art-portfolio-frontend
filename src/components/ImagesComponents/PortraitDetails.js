@@ -47,36 +47,53 @@ function PortraitDetails() {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-      <div className="p-6 m-6 bg-white rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold text-center mb-8 capitalize">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500">
+      <div className="p-6 m-6 rounded-lg shadow-yellow-500/50 shadow-lg">
+        <h2 className="text-6xl sm:text-2xl md:text-4xl font-bold text-center mb-8 text-white tracking-wide capitalize">
           {showImage.title}
         </h2>
-
         <div className="flex items-center mb-8">
-          <strong className="text-lg">Theme : </strong>
-          <p className="text-lg ml-2 capitalize">
+          <strong className="text-6xl sm:text-2xl md:text-3xl font-bold text-center mb-8 tracking-wide">
+            Theme : &nbsp;
+          </strong>
+
+          <p
+            className="text-6xl sm:text-2xl md:text-3xl text-center mb-8 capitalize"
+            style={{ fontFamily: "'Anonymous Pro', monospace" }}
+          >
             {showImage.theme ? showImage.theme : "All"}
           </p>
         </div>
-
         <div className="flex items-center mb-8">
-          <strong className="text-lg">Description : </strong>
-          <p className="text-lg ml-2 capitalize">
+          <strong className="text-6xl sm:text-2xl md:text-3xl font-bold text-center mb-8 tracking-wide">
+            Description : &nbsp;
+          </strong>
+          <p
+            className="text-6xl sm:text-2xl md:text-3xl text-center mb-8 capitalize"
+            style={{ fontFamily: "'Anonymous Pro', monospace" }}
+          >
             {showImage.description ? showImage.description : "Not Available"}
           </p>
         </div>
-
         <div className="flex items-center mb-8">
-          <strong className="text-lg">Medium / Material : </strong>
-          <p className="text-lg ml-2capitalize">
+          <strong className="text-6xl sm:text-2xl md:text-3xl font-bold text-center mb-8 tracking-wide">
+            Medium / Material : &nbsp;{" "}
+          </strong>
+          <p
+            className="text-6xl sm:text-2xl md:text-3xl text-center mb-8 capitalize"
+            style={{ fontFamily: "'Anonymous Pro', monospace" }}
+          >
             {showImage.medium ? showImage.medium : "Not Available"}
           </p>
         </div>
-
         <div className="flex items-center mb-8">
-          <strong className="text-lg">Image Created On : &nbsp;</strong>
-          <p className="text-lg">
+          <strong className="text-6xl sm:text-2xl md:text-3xl font-bold text-center mb-8 tracking-wide">
+            Image Created On : &nbsp;
+          </strong>
+          <p
+            className="text-6xl sm:text-2xl md:text-3xl text-center mb-8 capitalize"
+            style={{ fontFamily: "'Anonymous Pro', monospace" }}
+          >
             {new Date(showImage.created_at).toLocaleDateString("en-US", {
               month: "long",
               day: "numeric",
@@ -84,32 +101,47 @@ function PortraitDetails() {
             })}
           </p>
         </div>
-
         {showImage.is_for_sale ? (
           <>
             <div className="mb-4">
-              <strong className="text-lg">For Sale: </strong>
-              <p className="text-lg">
-                <strong>Price: </strong>
+              <strong className="text-6xl sm:text-2xl md:text-3xl font-bold text-center mb-8 tracking-wide">
+                For Sale{" "}
+              </strong>
+              <p
+                className="text-6xl sm:text-2xl md:text-3xl text-center mb-8 capitalize"
+                style={{ fontFamily: "'Anonymous Pro', monospace" }}
+              >
+                <strong className="text-6xl sm:text-2xl md:text-3xl font-bold text-center mb-8 tracking-wide">
+                  Price:{" "}
+                </strong>
                 {showImage.price} USD
               </p>
             </div>
           </>
         ) : (
-          <p className="text-lg mb-4">
-            <strong>Not For Sale</strong>
+          <p
+            className="text-6xl sm:text-2xl md:text-3xl text-center mb-8 capitalize"
+            style={{ fontFamily: "'Anonymous Pro', monospace" }}
+          >
+            <strong className="text-6xl sm:text-2xl md:text-3xl font-bold text-center mb-8 tracking-wide">
+              Not For Sale
+            </strong>
           </p>
         )}
 
         <div className="flex justify-end space-x-4">
-          <button className="bg-green-300 hover:bg-green-100 text-xl font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline shadow-green-500/50 border shadow-md">
-            <Link to="/index">Back</Link>
+          <button
+            className="mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
+            onClick={() => navigate(-1)}
+          >
+            Back
           </button>
-          <button className="bg-green-300 hover:bg-green-100 text-xl font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline shadow-green-500/50 border shadow-md">
+
+          <button className="mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline">
             <Link to={`/art/images/${id}/edit`}>Edit</Link>
           </button>
           <button
-            className="bg-green-300 hover:bg-green-100 text-xl font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline shadow-green-500/50 border shadow-md"
+            className="mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
             onClick={handleDelete}
           >
             Delete
@@ -117,7 +149,7 @@ function PortraitDetails() {
         </div>
       </div>
 
-      <div className="p-6 m-6 bg-white rounded-lg shadow-lg relative">
+      <div className="p-6 m-6 bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg relative">
         {showImage.image_url ? (
           <div>
             <img
@@ -126,10 +158,10 @@ function PortraitDetails() {
               alt={showImage.title}
             />
 
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-75 transition duration-300">
+            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg bg-opacity-0 hover:bg-opacity-75 transition duration-300">
                 <img
-                  className="w-full h-full object-contain hover:scale-150 transition duration-300"
+                  className="w-full h-full object-contain bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg hover:scale-150 transition duration-300"
                   src={showImage.image_url}
                   alt={showImage.title}
                 />
@@ -137,8 +169,8 @@ function PortraitDetails() {
             </div>
           </div>
         ) : (
-          <div className="w-96 h-96 bg-gray-200 flex items-center justify-center">
-            <p className="text-gray-500 font-bold text-xl text-center">
+          <div className="w-96 h-96 flex items-center justify-center bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
+            <p className="text-white-500 font-bold text-xl text-center">
               No Image Available
             </p>
           </div>

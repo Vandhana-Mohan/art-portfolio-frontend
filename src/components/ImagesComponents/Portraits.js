@@ -16,7 +16,7 @@ function Portraits() {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 rounded-lg shadow-green-500/50 border shadow-md">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 rounded-lg shadow-yellow-500/50 shadow-lg">
       {portrait.map((item) => (
         <Portrait key={item.id} portrait={item} />
       ))}
