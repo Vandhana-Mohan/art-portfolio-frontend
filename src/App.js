@@ -48,10 +48,11 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500">
       <BrowserRouter>
         <Header />
         <NavBar />
+        <FilterButtons />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -62,6 +63,7 @@ function App() {
             <Route path="/developers" element={<Developer />} />
             <Route path="/newsletter" element={<Newsletter />} />
             <Route path="/help" element={<Help />} />
+            <Route path="*" element={<FourOFour />} />
 
             {authUser ? (
               <>
@@ -74,7 +76,7 @@ function App() {
             ) : (
               <>
                 <Route
-                  path="/SignIn"
+                  path="/"
                   element={
                     <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-center">
                       <div className="p-6 m-6 rounded-lg shadow-red-500/50 border shadow-lg">
@@ -103,7 +105,6 @@ function App() {
                 />
               </>
             )}
-            <Route path="*" element={<FourOFour />} />
           </Routes>
         </main>
         <Footer />

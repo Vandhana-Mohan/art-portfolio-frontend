@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaEnvelope, FaUser } from "react-icons/fa";
 
 function Newsletter() {
   const [firstName, setFirstName] = useState("");
@@ -14,58 +15,93 @@ function Newsletter() {
   };
 
   return (
-    <div className="bg-gray-100 p-8 rounded-lg">
-      <div className="text-center">
-        <h4 className="text-4xl font-bold mb-4">Subscribe to all the fun</h4>
-        <p className="text-gray-600 text-lg font-bold">
-          Stay Creative with Art, see the latest updates, events, and much more!
+    <div className="bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 min-h-screen flex items-center justify-center">
+      <div className="w-full max-w-md p-6 bg-white rounded-md shadow-xl">
+        <h1 className="text-3xl font-semibold text-center text-purple-700 uppercase mb-4">
+          Subscribe to all the fun
+        </h1>
+        <p className="text-gray-600 text-lg font-bold text-center mb-6">
+          Stay Creative with Art
         </p>
-      </div>
-      <form className="mt-8" onSubmit={handleSubmit}>
-        <div className="flex flex-wrap mb-4">
-          <div className="w-full md:w-1/2 md:pr-2">
+        <p className="text-gray-600 text-lg font-bold text-center mb-6">
+          See the latest updates, events, and much more!
+        </p>
+
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label
+              htmlFor="first_name"
+              className="flex items-center text-gray-800"
+            >
+              <FaUser className="mr-2 text-2xl" />
+              <span className="text-lg tracking-wide font-semibold">
+                First Name
+              </span>
+            </label>
             <input
               type="text"
+              className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border border-gray-300 rounded-md focus:ring focus:ring-purple-300 focus:border-purple-400 focus:outline-none"
               name="firstName"
               id="first-name"
+              placeholder="Enter your First Name"
               value={firstName}
               onChange={(event) => setFirstName(event.target.value)}
-              placeholder="First Name"
-              className="w-full p-2 border border-gray-300 rounded"
+              autoFocus
+              required
+              title="Enter your First Name"
             />
           </div>
-          <div className="w-full md:w-1/2 md:pl-2">
+
+          <div className="mb-4">
+            <label
+              htmlFor="last_name"
+              className="flex items-center text-gray-800"
+            >
+              <FaUser className="mr-2 text-2xl" />
+              <span className="text-lg tracking-wide font-semibold">
+                Last Name
+              </span>
+            </label>
             <input
               type="text"
+              className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border border-gray-300 rounded-md focus:ring focus:ring-purple-300 focus:border-purple-400 focus:outline-none"
               name="lastName"
               id="last-name"
               value={lastName}
               onChange={(event) => setLastName(event.target.value)}
-              placeholder="Last Name"
-              className="w-full p-2 border border-gray-300 rounded"
+              placeholder="Enter your Last Name"
+              required
+              title="Enter your Last Name"
             />
           </div>
-        </div>
 
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          placeholder="Email"
-          className="w-full p-2 border border-gray-300 rounded"
-        />
+          <div className="mb-4">
+            <label htmlFor="email" className="flex items-center text-gray-800">
+              <FaEnvelope className="mr-2 text-2xl" />
+              <span className="text-lg tracking-wide font-semibold">Email</span>
+            </label>
+            <input
+              type="email"
+              className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border border-gray-300 rounded-md focus:ring focus:ring-purple-300 focus:border-purple-400 focus:outline-none"
+              id="email"
+              placeholder="Enter your Email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              required
+              title="Enter your email"
+            />
+          </div>
 
-        <div className="flex justify-center">
-          <button
-            type="submit"
-            className="w-1/4 mt-4 px-4 py-4 font-bold text-xl text-white bg-indigo-600 rounded hover:bg-indigo-700"
-          >
-            SIGN UP NOW
-          </button>
-        </div>
-      </form>
+          <div className="mt-6">
+            <button
+              type="submit"
+              className="w-full px-4 py-2 text-lg tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600"
+            >
+              SIGN UP NOW
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
