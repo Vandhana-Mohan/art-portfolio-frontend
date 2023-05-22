@@ -49,7 +49,7 @@ function PortraitDetails() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500">
       <div className="p-6 m-6 rounded-lg shadow-yellow-500/50 shadow-lg">
-        <h2 className="text-6xl sm:text-2xl md:text-4xl font-bold text-center mb-8 text-white tracking-wide capitalize">
+        <h2 className="text-6xl sm:text-2xl md:text-4xl font-bold text-center mb-8 tracking-wide capitalize">
           {showImage.title}
         </h2>
         <div className="flex items-center mb-8">
