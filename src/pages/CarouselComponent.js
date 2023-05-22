@@ -42,7 +42,7 @@ function CarouselComponent() {
       <Carousel
         autoPlay
         infiniteLoop
-        interval={5000}
+        interval={1000}
         showThumbs={false}
         showArrows={true} // Enable arrows
         showStatus={false} // Disable status indicator
