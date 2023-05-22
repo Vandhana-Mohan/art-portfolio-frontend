@@ -38,36 +38,41 @@ function AuthDetails() {
   return (
     <div>
       {authUser ? (
-        <div className="flex items-center space-x-2">
-          <img alt="Profile" src={sana} className="w-24 h-24 rounded-full" />
-          <button
-            className="bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-4 rounded flex items-center space-x-2"
-            onClick={userSignOut}
-          >
-            <FaCog className="text-xl" />
-            <span className="font-medium">Account Settings</span>
-          </button>
-
-          <button
-            className="bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-4 rounded"
-            onClick={userSignOut}
-          >
-            Sign Out
-          </button>
-        </div>
+        <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <img
+          alt="Profile"
+          src={sana}
+          className="w-24 h-24 rounded-full shadow-yellow-500/50 shadow-lg"
+        />
+        <Link
+          to="/help"
+          className="mt-2 px-8 py-2 text-black text-xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md font-bold flex items-center space-x-2"
+        >
+          <FaCog className="text-xl" />
+          <span className="font-medium">Account Settings</span>
+        </Link>
+      
+        <button
+          className="mt-2 px-8 py-2 text-black text-xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md font-bold flex items-center space-x-2"
+          onClick={userSignOut}
+        >
+          Sign Out
+        </button>
+      </div>
+      
       ) : (
-        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-center">
+        <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <div>
             <Link
               to="/SignIn"
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+              className="mt-2 px-8 py-2 text-black text-xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md font-bold flex items-center space-x-2"
             >
               Sign In
             </Link>
           </div>
           <div>
             <Link
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+              className="mt-2 px-8 py-2 text-black text-xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md font-bold flex items-center space-x-2"
               to="/SignUp"
             >
               Create New Account

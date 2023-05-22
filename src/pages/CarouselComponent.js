@@ -38,28 +38,27 @@ function CarouselComponent() {
   }, []);
 
   return (
-    <div className="max-w-full mx-auto bg-green-100">
+    <div className="max-w-6xl mx-auto">
       <Carousel
         autoPlay
         infiniteLoop
-        interval={2000}
-        className="carousel"
+        interval={1000}
         showThumbs={false}
         showArrows={true} // Enable arrows
         showStatus={false} // Disable status indicator
         swipeable={images.length > slidesToShow} // Enable swipe only if there are more slides than shown
         centerMode={slidesToShow !== 1} // Enable center mode if more than 1 slide is shown
         centerSlidePercentage={100 / slidesToShow} // Adjust the center slide percentage based on the number of slides shown
+        thumbWidth={0} // Hide thumbnail navigation
+        stopOnHover={false} // Continue autoplay on hover
       >
         {images.map((item) => (
-          <div
-            key={item.id}
-            className="carousel-item"
-          >
+          <div key={item.id} className="carousel-item">
             <img
               src={item.image_url}
               alt={item.title}
-              className="w-full h-96 object-cover"
+              className="w-max h-96 object-cover"
+              
             />
           </div>
         ))}

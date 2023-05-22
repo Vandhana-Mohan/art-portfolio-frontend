@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
+/*
 function NewUserForm() {
-  /*
+  
   let navigate = useNavigate();
 
   const [newUser, setNewUser] = useState({
@@ -212,8 +210,9 @@ function NewUserForm() {
       </form>
     </div>
   );
-  */
+  
   return null;
 }
 
 export default NewUserForm;
+*/

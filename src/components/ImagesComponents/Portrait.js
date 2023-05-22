@@ -10,7 +10,7 @@ function Portrait({ portrait }) {
   };
 
   return (
-    <div className="rounded-lg shadow-md border">
+    <div className="rounded-lg shadow-md">
       <Link
         to={`/art/${portrait.id}`}
         className="block w-full h-60 rounded-lg overflow-hidden transition-colors duration-300 hover:bg-gray-100"
@@ -30,7 +30,7 @@ function Portrait({ portrait }) {
         )}
       </Link>
 
-      <div className="flex justify-end p-2 relative">
+      <div className="flex justify-end items-center p-2 relative">
         <button
           className="text-black-600 text-2xl hover:text-gray-800"
           onClick={handleMoreOptions}
@@ -48,10 +48,10 @@ function Portrait({ portrait }) {
         )}
       </div>
 
-      <div className="flex justify-center p-2">
+      <div className="p-2 text-center">
         <Link
           to={`/art/${portrait.id}`}
-          className="text-blue-500 font-bold text-xl capitalize hover:underline"
+          className="text-white font-bold text-2xl capitalize hover:underline"
         >
           {portrait.title}
         </Link>
