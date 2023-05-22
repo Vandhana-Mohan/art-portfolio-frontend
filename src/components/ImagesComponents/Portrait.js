@@ -13,12 +13,12 @@ function Portrait({ portrait }) {
     <div className="bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
       <Link
         to={`/art/${portrait.id}`}
-        className="block w-full h-60 rounded-lg overflow-hidden transition-colors duration-300 bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg"
+        className="block w-full h-60 rounded-lg overflow-hidden transition-colors duration-300"
       >
         {portrait.image_url ? (
           <img
             alt={portrait.title}
-            className="w-full h-full object-cover bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg"
+            className="w-full h-full object-cover rounded-lg shadow-yellow-500/50 shadow-lg"
             src={portrait.image_url}
           />
         ) : (
