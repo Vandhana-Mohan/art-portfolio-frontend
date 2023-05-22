@@ -42,7 +42,7 @@ function CarouselComponent() {
       <Carousel
         autoPlay
         infiniteLoop
-        interval={1000}
+        interval={3000}
         showThumbs={false}
         showArrows={true} // Enable arrows
         showStatus={false} // Disable status indicator
@@ -58,7 +58,6 @@ function CarouselComponent() {
               src={item.image_url}
               alt={item.title}
               className="w-max h-96 object-cover"
-              
             />
           </div>
         ))}
