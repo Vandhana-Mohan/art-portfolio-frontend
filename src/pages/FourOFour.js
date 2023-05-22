@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 function FourOFour() {
   const navigate = useNavigate();
   return (
-    <div className="flex justify-center items-center bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 p-6 m-6 py-24 rounded-lg shadow-yellow-500/50 shadow-lg">
+    <div className="flex justify-center items-center bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 p-6 m-6 py-24 rounded-lg shadow-yellow-500/50 shadow-lg">
       <h1 className="text-6xl sm:text-xl md:text-4xl font-bold text-white text-center">
         Please Sign In . . .
       </h1>

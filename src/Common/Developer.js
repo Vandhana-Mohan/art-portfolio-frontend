@@ -15,15 +15,15 @@ function Developer() {
   ];
 
   return (
-    <div className="py-8 mx-auto px-4 py-10 max-w-xl bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
+    <div className="py-8 mx-auto px-4 py-10 max-w-xl bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg">
       <h1 className="text-6xl sm:text-2xl md:text-4xl font-semibold text-center text-white uppercase tracking-wide mb-4">
         Artistic Universe Developer
       </h1>
-      <div className="flex justify-center bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
+      <div className="flex justify-center bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg">
         {developers.map((developer, index) => (
           <div
             key={index}
-            className="max-w-md mx-4 bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg overflow-hidden"
+            className="max-w-md mx-4 bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg overflow-hidden"
           >
             <img
               className="w-1/2 h-auto object-cover rounded-l-lg"

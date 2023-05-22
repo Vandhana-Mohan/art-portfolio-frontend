@@ -47,7 +47,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500">
+    <div className="bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300">
       <BrowserRouter>
         <Header />
         <NavBar />
@@ -63,7 +63,7 @@ function App() {
             <Route path="/newsletter" element={<Newsletter />} />
             <Route path="/help" element={<Help />} />
             <Route path="*" element={<FourOFour />} />
-              
+
             {authUser ? (
               <>
                 <Route path="/index" element={<Index />} />

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
-    <div className="mx-auto px-4 py-10 max-w-lg bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
+    <div className="mx-auto px-4 py-10 max-w-lg bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg">
       <h1 className="text-6xl sm:text-2xl md:text-4xl font-semibold text-center text-white uppercase tracking-wide mb-4">
         Artistic Universe
       </h1>

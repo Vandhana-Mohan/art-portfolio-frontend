@@ -2,7 +2,7 @@ import Portraits from "../../components/ImagesComponents/Portraits";
 
 function Index() {
   return (
-    <div className="flex flex-col items-center m-6 p-6 w-full justify-center bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
+    <div className="flex flex-col items-center m-6 p-6 w-full justify-center bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg">
       <h2 className="text-3xl sm:text-2xl md:text-4xl lg:text-4xl tracking-wider font-bold text-white text-center mb-6">
         Build an Online Portfolio, just like these . . .
       </h2>
