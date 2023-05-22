@@ -35,9 +35,10 @@ This app includes the following features:
 
 - Trello board
 - Read me for front end and back end
+- Carousel
+- Sign In - Firebase
 - Added Google font
-- Changed favicon
-- Changed title
+- Changed favicon & title
 - Added Tailwind Css
 - validations in back end and front end
 - add about us page, contact us page, header, footer, social media icons for interaction
