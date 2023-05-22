@@ -16,67 +16,92 @@ function ContactUs() {
   };
 
   return (
-    <div className="mx-auto px-4 py-10 max-w-lg rounded-lg shadow-lg shadow-red-500/50 border shadow-md">
-      <h1 className="text-4xl font-bold tracking-wide text-gray-900 text-center">
-        Contact Us
-      </h1>
-      <br />
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-xl font-bold mb-2" htmlFor="name">
-            Name
-          </label>
-          <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="name"
-            type="text"
-            placeholder="John Doe"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-xl font-bold mb-2" htmlFor="email">
-            Email
-          </label>
-          <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="email"
-            type="email"
-            placeholder="johndoe@example.com"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label
-            className="block text-gray-700 text-xl font-bold mb-2"
-            htmlFor="message"
-          >
-            Message
-          </label>
-          <textarea
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="message"
-            rows="5"
-            placeholder="Enter your message here"
-            value={message}
-            onChange={(event) => setMessage(event.target.value)}
-            required
-          />
-        </div>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
+      <div className="w-full max-w-md p-6 bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
+        <h1 className="text-6xl sm:text-2xl md:text-4xl font-semibold text-center text-white uppercase tracking-wide mb-4">
+          Contact Us
+        </h1>
+        <br />
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label
+              className="flex items-center text-6xl sm:text-2xl md:text-xl font-bold tracking-wide capitalize"
+              htmlFor="name"
+            >
+              Name
+            </label>
+            <input
+              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="name"
+              type="text"
+              placeholder="Enter First Name"
+              style={{
+                fontFamily: "'Anonymous Pro', monospace",
+                fontSize: "14px",
+                color: "black",
+              }}
+              value={name}
+              onChange={(event) => setName(event.target.value)}
+              required
+              title="Enter your First Name"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              className="flex items-center text-6xl sm:text-2xl md:text-xl font-bold tracking-wide capitalize"
+              htmlFor="email"
+            >
+              Email
+            </label>
+            <input
+              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="email"
+              placeholder="Enter Email"
+              style={{
+                fontFamily: "'Anonymous Pro', monospace",
+                fontSize: "14px",
+                color: "black",
+              }}
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              required
+              title="Enter your Last Name"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              className="flex items-center text-6xl sm:text-2xl md:text-xl font-bold tracking-wide capitalize"
+              htmlFor="message"
+            >
+              Message
+            </label>
+            <textarea
+              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="message"
+              rows="5"
+              placeholder="Enter your message here"
+              style={{
+                fontFamily: "'Anonymous Pro', monospace",
+                fontSize: "16px",
+                color: "black",
+              }}
+              value={message}
+              onChange={(event) => setMessage(event.target.value)}
+              required
+            />
+          </div>
 
-        <div className="flex">
-          <button
-            className="mt-10 mx-auto bg-red-500 hover:bg-red-300 text-white text-2xl font-bold py-3 px-6 rounded-lg shadow-md"
-            type="submit"
-          >
-            Send
-          </button>
-        </div>
-      </form>
+          <div className="mt-6">
+            <button
+              type="submit"
+              className="mt-6 px-8 py-4 font-bold text-center text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
+            >
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

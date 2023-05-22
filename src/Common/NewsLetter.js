@@ -15,15 +15,15 @@ function Newsletter() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 min-h-screen flex items-center justify-center">
-      <div className="w-full max-w-md p-6 bg-white rounded-md shadow-xl">
-        <h1 className="text-3xl font-semibold text-center text-purple-700 uppercase mb-4">
-          Subscribe to all the fun
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
+      <div className="w-full max-w-md p-6 bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
+        <h1 className="text-6xl sm:text-2xl md:text-4xl font-semibold text-center text-white uppercase tracking-wide mb-4">
+          Subscribe to fun
         </h1>
-        <p className="text-gray-600 text-lg font-bold text-center mb-6">
+        <p className="text-white text-lg font-bold text-center mb-6">
           Stay Creative with Art
         </p>
-        <p className="text-gray-600 text-lg font-bold text-center mb-6">
+        <p className="text-white text-lg font-bold text-center mb-6">
           See the latest updates, events, and much more!
         </p>
 
@@ -31,7 +31,7 @@ function Newsletter() {
           <div className="mb-4">
             <label
               htmlFor="first_name"
-              className="flex items-center text-gray-800"
+              className="flex items-center text-6xl sm:text-2xl md:text-xl font-bold tracking-wide capitalize"
             >
               <FaUser className="mr-2 text-2xl" />
               <span className="text-lg tracking-wide font-semibold">
@@ -40,10 +40,15 @@ function Newsletter() {
             </label>
             <input
               type="text"
-              className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border border-gray-300 rounded-md focus:ring focus:ring-purple-300 focus:border-purple-400 focus:outline-none"
+              className="border border-gray-300 rounded-md px-3 py-2 relative shadow outline-none focus:outline-none focus:ring lg:w-full text-6xl sm:text-2xl md:text-3xl font-bold tracking-wide"
               name="firstName"
               id="first-name"
               placeholder="Enter your First Name"
+              style={{
+                fontFamily: "'Anonymous Pro', monospace",
+                fontSize: "14px",
+                color: "black",
+              }}
               value={firstName}
               onChange={(event) => setFirstName(event.target.value)}
               autoFocus
@@ -55,7 +60,7 @@ function Newsletter() {
           <div className="mb-4">
             <label
               htmlFor="last_name"
-              className="flex items-center text-gray-800"
+              className="flex items-center text-6xl sm:text-2xl md:text-xl font-bold tracking-wide capitalize"
             >
               <FaUser className="mr-2 text-2xl" />
               <span className="text-lg tracking-wide font-semibold">
@@ -64,27 +69,40 @@ function Newsletter() {
             </label>
             <input
               type="text"
-              className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border border-gray-300 rounded-md focus:ring focus:ring-purple-300 focus:border-purple-400 focus:outline-none"
+              className="border border-gray-300 rounded-md px-3 py-2 relative shadow outline-none focus:outline-none focus:ring lg:w-full text-6xl sm:text-2xl md:text-3xl font-bold tracking-wide"
               name="lastName"
               id="last-name"
               value={lastName}
               onChange={(event) => setLastName(event.target.value)}
               placeholder="Enter your Last Name"
+              style={{
+                fontFamily: "'Anonymous Pro', monospace",
+                fontSize: "14px",
+                color: "black",
+              }}
               required
               title="Enter your Last Name"
             />
           </div>
 
           <div className="mb-4">
-            <label htmlFor="email" className="flex items-center text-gray-800">
+            <label
+              htmlFor="email"
+              className="flex items-center text-6xl sm:text-2xl md:text-xl font-bold tracking-wide capitalize"
+            >
               <FaEnvelope className="mr-2 text-2xl" />
               <span className="text-lg tracking-wide font-semibold">Email</span>
             </label>
             <input
               type="email"
-              className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border border-gray-300 rounded-md focus:ring focus:ring-purple-300 focus:border-purple-400 focus:outline-none"
+              className="border border-gray-300 rounded-md px-3 py-2 relative shadow outline-none focus:outline-none focus:ring lg:w-full text-6xl sm:text-2xl md:text-3xl font-bold tracking-wide"
               id="email"
               placeholder="Enter your Email"
+              style={{
+                fontFamily: "'Anonymous Pro', monospace",
+                fontSize: "14px",
+                color: "black",
+              }}
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               required
@@ -95,7 +113,7 @@ function Newsletter() {
           <div className="mt-6">
             <button
               type="submit"
-              className="w-full px-4 py-2 text-lg tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600"
+              className="mt-6 px-8 py-4 font-bold text-center text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
             >
               SIGN UP NOW
             </button>

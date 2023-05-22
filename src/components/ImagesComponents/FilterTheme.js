@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 
 function FilterTheme({ cat }) {
   return (
-    <div className="rounded-lg border shadow-md overflow-hidden">
+    <div className="overflow-hidden bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
       <Link
         to={`/art/${cat.id}`}
-        className="py-2 px-4 rounded-lg shadow-md w-max transition-colors duration-300"
+        className="py-2 px-4 w-max rounded-lg overflow-hidden transition-colors duration-300 bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500"
       >
         {cat.image_url ? (
           <img
             src={cat.image_url}
             alt={cat.title}
-            className="w-full h-60 object-cover"
+            className="w-full h-60 object-cover bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg"
           />
         ) : (
           <div className="w-full h-60 bg-gray-200 flex items-center justify-center">
@@ -22,8 +22,11 @@ function FilterTheme({ cat }) {
         )}
       </Link>
       <div className="p-4 text-center">
-        <Link to={`/art/${cat.id}`} className="text-blue-500 hover:underline">
-          <h2 className="text-2xl font-bold mb-6">
+        <Link
+          to={`/art/${cat.id}`}
+          className="text-white font-bold text-4xl tracking-wider capitalize hover:underline"
+        >
+          <h2 className="text-6xl sm:text-2xl md:text-3xl font-bold text-center mb-8 tracking-wide">
             Title:{" "}
             {cat.title
               .split(" ")
@@ -33,8 +36,10 @@ function FilterTheme({ cat }) {
         </Link>
 
         <div className="flex items-center mb-8">
-          <strong className="text-lg">Description: </strong>
-          <p className="text-lg ml-2">
+          <strong className="sm:text-xl md:text-2xl font-bold text-center mb-8 tracking-wide">
+            Description : &nbsp;{" "}
+          </strong>
+          <p className="text-3xl sm:text-lg md:text-xl font-bold text-center mb-8 tracking-wide">
             {cat.description
               ? cat.description.charAt(0).toUpperCase() +
                 cat.description.slice(1)
@@ -43,22 +48,28 @@ function FilterTheme({ cat }) {
         </div>
 
         <div className="flex items-center mb-8">
-          <strong className="text-lg">Theme: </strong>
-          <p className="text-lg ml-2">
+          <strong className="sm:text-xl md:text-2xl font-bold text-center mb-8 tracking-wide">
+            Theme : &nbsp;{" "}
+          </strong>
+          <p className="text-3xl sm:text-lg md:text-xl font-bold text-center mb-8 tracking-wide">
             {cat.theme ? cat.theme : "Not Available"}
           </p>
         </div>
 
         <div className="flex items-center mb-8">
-          <strong className="text-lg">Medium / Material: </strong>
-          <p className="text-lg ml-2">
+          <strong className="sm:text-xl md:text-2xl font-bold text-center mb-8 tracking-wide">
+            Medium / Material : &nbsp;{" "}
+          </strong>
+          <p className="text-3xl sm:text-lg md:text-xl font-bold text-center mb-8 tracking-wide">
             {cat.medium ? cat.medium : "Not Available"}
           </p>
         </div>
 
         <div className="flex items-center mb-8">
-          <strong className="text-lg">Image Created On: &nbsp;</strong>
-          <p className="text-lg">
+          <strong className="sm:text-xl md:text-2xl font-bold text-center mb-8 tracking-wide">
+            Image Created On : &nbsp;{" "}
+          </strong>
+          <p className="text-3xl sm:text-lg md:text-xl font-bold text-center mb-8 tracking-wide">
             {new Date(cat.created_at).toLocaleDateString("en-US", {
               month: "long",
               day: "numeric",
@@ -69,22 +80,28 @@ function FilterTheme({ cat }) {
 
         {cat.is_for_sale ? (
           <div className="flex items-center mb-8">
-            <strong className="text-lg">For Sale, &nbsp;</strong>
-            <p className="text-lg">
-              <strong>Price: </strong>
+            <strong className="sm:text-xl md:text-2xl font-bold text-center mb-8 tracking-wide">
+              For Sale, &nbsp;
+            </strong>
+            <p className="text-3xl sm:text-lg md:text-xl font-bold text-center mb-8 tracking-wide">
+              <strong className="sm:text-xl md:text-2xl font-bold text-center mb-8 tracking-wide">
+                Price : &nbsp;{" "}
+              </strong>
               {cat.price} USD
             </p>
           </div>
         ) : (
-          <p className="text-lg mb-4">
-            <strong>Not For Sale</strong>
+          <p className="text-3xl sm:text-lg md:text-xl font-bold text-center mb-8 tracking-wide">
+            <strong className="sm:text-xl md:text-2xl font-bold text-center mb-8 tracking-wide">
+              Not For Sale
+            </strong>
           </p>
         )}
 
         <div className="flex flex-wrap mb-4 justify-center">
           <Link
             to={`/art/${cat.id}`}
-            className="py-2 px-4 mt-6 bg-green-300 hover:bg-green-100 text-xl font-bold flex focus:outline-none focus:shadow-outline rounded-lg shadow-md w-max transition-colors duration-300 text-center"
+            className="mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
           >
             View Details
           </Link>
