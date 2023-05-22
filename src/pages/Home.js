@@ -19,7 +19,7 @@ function Home() {
           <Link to="/SignIn">
             <button
               type="button"
-              className="mt-6 px-8 py-4 text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
+              className="mt-6 px-8 py-4 text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
               data-te-ripple-init
               data-te-ripple-color="light"
             >

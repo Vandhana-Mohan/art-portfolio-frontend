@@ -46,43 +46,43 @@ function FilterButtons() {
         <>
           <div className="flex flex-wrap gap-4">
             <button
-              className="mt-4 text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
+              className="mt-4 text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
               onClick={() => handleThemeClick("Art")}
             >
               Art
             </button>
             <button
-              className="mt-4 text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
+              className="mt-4 text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
               onClick={() => handleThemeClick("Creative Direction")}
             >
               Creative Direction
             </button>
             <button
-              className="mt-4 text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
+              className="mt-4 text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
               onClick={() => handleThemeClick("Designer")}
             >
               Fashion
             </button>
             <button
-              className="mt-4 text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
+              className="mt-4 text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
               onClick={() => handleThemeClick("Graphic Design")}
             >
               Graphic Design
             </button>
             <button
-              className="mt-4 text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
+              className="mt-4 text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
               onClick={() => handleThemeClick("Sports")}
             >
               Sports
             </button>
             <button
-              className="mt-4 text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
+              className="mt-4 text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
               onClick={() => handleThemeClick("Photography")}
             >
               Photography
             </button>
             <button
-              className="mt-4 text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
+              className="mt-4 text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
               onClick={() => handleThemeClick("Architecture")}
             >
               Architecture
