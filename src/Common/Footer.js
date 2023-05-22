@@ -15,7 +15,7 @@ function SocialMediaIconLink({ url, iconClassName }) {
 
 function Footer() {
   return (
-    <footer className="bg-yellow-100">
+    <footer className="bg-yellow-50">
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-base sm:text-lg">

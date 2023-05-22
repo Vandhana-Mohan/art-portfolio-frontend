@@ -22,7 +22,7 @@ function SignIn() {
 
   function google() {
     signInWithRedirect(auth, provider);
-    navigate("/index");
+    // navigate("/index");
   }
 
   return (
