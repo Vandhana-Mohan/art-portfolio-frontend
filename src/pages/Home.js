@@ -6,7 +6,7 @@ function Home() {
     <div className="flex flex-col items-center bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 p-6">
       <div className="max-w-screen-xl">
         <h1
-          className="text-5xl sm:text-4xl md:text-5xl font-bold tracking-wider text-center mb-8 text-white"
+          className="text-6xl sm:text-2xl md:text-4xl font-bold tracking-wider text-center mb-8 text-white"
           style={{ fontFamily: "'Alex Brush', cursive" }}
         >
           A Boundless Canvas for Visionaries: A Haven for Creative Artistry
@@ -22,7 +22,7 @@ function Home() {
           <Link to="/SignIn">
             <button
               type="button"
-              className="mt-6 px-8 py-4 text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white"
+              className="mt-6 px-8 py-4 text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
               data-te-ripple-init
               data-te-ripple-color="light"
             >
