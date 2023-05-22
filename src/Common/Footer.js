@@ -17,7 +17,7 @@ function Footer() {
   return (
     <footer className="bg-gray-100">
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-base sm:text-lg">
             <ul className="space-y-4">
               <li>
@@ -58,7 +58,7 @@ function Footer() {
             <h3 className="text-gray-700 font-bold mb-8 text-2xl underline">
               Connect With Our Social Media
             </h3>
-            <ul className="flex justify-center space-x-16">
+            <ul className="flex justify-center space-x-8 sm:space-x-16">
               <li>
                 <SocialMediaIconLink
                   url="https://www.youtube.com/@TheArtsyGirl4578"
@@ -125,7 +125,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <p className="text-center text-gray-500 mt-8 text-xs sm:text-base">
+        <p className="text-center text-gray-500 mt-8 text-xs sm:text-sm">
           © 2023 Vandhana Mohan. All rights reserved.
         </p>
       </div>

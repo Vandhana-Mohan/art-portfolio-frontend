@@ -7,7 +7,7 @@ function NewImageForm() {
 
   const [newPortrait, setNewPortrait] = useState({
     title: "",
-    theme:"All",
+    theme: "All",
     price: 0,
     is_for_sale: false,
     description: "",

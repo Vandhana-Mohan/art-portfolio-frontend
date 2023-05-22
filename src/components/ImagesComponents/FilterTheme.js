@@ -5,7 +5,7 @@ function FilterTheme({ cat }) {
     <div className="rounded-lg border shadow-md overflow-hidden">
       <Link
         to={`/art/${cat.id}`}
-        className="py-2 px-4 rounded-lg bg-green-500 bg-opacity-50 shadow-md w-max transition-colors duration-300"
+        className="py-2 px-4 rounded-lg shadow-md w-max transition-colors duration-300"
       >
         {cat.image_url ? (
           <img

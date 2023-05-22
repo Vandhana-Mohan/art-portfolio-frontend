@@ -4,28 +4,20 @@ import AuthDetails from "../components/AuthDetails";
 
 function Header() {
   return (
-    <header className="border-b-2 border-gray-300 py-4 bg-red-100">
+    <header className="border-b-2 border-gray-300 py-4 bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500">
       <div className="container mx-4 px-4 flex flex-col items-center justify-between sm:flex-row">
         <Link to="/">
           <div className="flex items-center text-3xl font-bold">
-            <h1
-              className="text-red-600 tracking-wider text-3xl sm:text-5xl font-bold"
-              style={{ fontFamily: "'Great Vibes', cursive" }}
-            >
-              Artistic
-            </h1>
-
             <img
               src={Art_Logo}
               alt="Shop_Logo"
-              className="w-24 h-24 object-cover"
+              className="w-24 h-24 object-contain ml-4"
             />
-
             <h1
-              className="text-red-600 tracking-wider text-3xl sm:text-5xl font-bold"
+              className="text-white tracking-wider text-3xl sm:text-5xl font-bold"
               style={{ fontFamily: "'Great Vibes', cursive" }}
             >
-              Universe
+              Artistic Universe
             </h1>
           </div>
         </Link>

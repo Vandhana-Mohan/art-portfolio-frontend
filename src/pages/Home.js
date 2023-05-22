@@ -2,8 +2,8 @@ import CarouselComponent from "./CarouselComponent";
 
 function Home() {
   return (
-    <div className="flex flex-col items-center bg-indigo-700 p-6">
-      <h1 className="text-4xl font-bold text-center mb-8">
+    <div className="flex flex-col items-center bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 p-6">
+      <h1 className="text-4xl font-bold text-center mb-8 text-white">
         A Boundless Canvas for Visionaries: A Haven for Creative Artistry
       </h1>
       <CarouselComponent />

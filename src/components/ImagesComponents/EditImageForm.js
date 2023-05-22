@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function EditImageForm() {
+function EditImageForm(authUser) {
   let { id } = useParams();
   let navigate = useNavigate();
 

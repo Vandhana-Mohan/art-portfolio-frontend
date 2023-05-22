@@ -54,7 +54,7 @@ function CarouselComponent() {
         {images.map((item) => (
           <div
             key={item.id}
-            className="carousel-item border border-red-600 border-8"
+            className="carousel-item"
           >
             <img
               src={item.image_url}
