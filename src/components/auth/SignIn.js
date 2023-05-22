@@ -26,9 +26,9 @@ function SignIn() {
   }
 
   return (
-    <div className="relative flex flex-col justify-center overflow-hidden">
-      <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
-        <h1 className="text-3xl font-semibold text-center text-purple-700 uppercase">
+    <div className="relative flex flex-col justify-center bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg overflow-hidden">
+      <div className="w-full p-6 m-auto bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg lg:max-w-xl">
+      <h1 className="text-6xl sm:text-2xl md:text-4xl font-semibold text-center text-white uppercase tracking-wide mb-4">
           Sign in
         </h1>
         <form onSubmit={signIn} className="mt-6">
@@ -80,7 +80,7 @@ function SignIn() {
           <div className="mt-6">
             <button
               type="submit"
-              className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600"
+              className="w-full px-4 py-2 tracking-wide transition-colors duration-200 transform mt-6 px-8 py-4 font-bold text-center text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
             >
               Login
             </button>
@@ -93,7 +93,7 @@ function SignIn() {
           <button
             type="button"
             onClick={google}
-            className="flex items-center justify-center w-full p-2 border border-gray-600 rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-violet-600"
+            className="w-full px-4 py-2 tracking-wide transition-colors duration-200 transform mt-6 px-8 py-4 font-bold text-center text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
           >
             Sign In With Google &nbsp; &nbsp;
             <svg
@@ -106,11 +106,11 @@ function SignIn() {
           </button>
         </div>
 
-        <p className="mt-8 text-lg font-light text-center text-gray-700">
+        <p className="mt-8 text-lg font-light text-center text-white">
           Don't have an account?{" "}
           <Link
             to="/SignUp"
-            className="font-medium text-purple-600 hover:underline"
+            className="font-medium text-white hover:underline"
           >
             Sign up
           </Link>
