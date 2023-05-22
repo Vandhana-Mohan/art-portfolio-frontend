@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import TotalItems from "../components/ImagesComponents/TotalItems";
 
 function NavBar() {
   return (
@@ -36,6 +37,7 @@ function NavBar() {
             Add Image to Collection
           </Link>
         </li>
+        <TotalItems />
       </ul>
     </nav>
   );

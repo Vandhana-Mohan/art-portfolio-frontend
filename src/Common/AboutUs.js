@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
-    <div className="mx-auto px-4 py-10 max-w-lg bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg">
+    <div className="mx-auto px-4 py-10 max-w-lg bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-black-500/50 shadow-lg">
       <h1 className="text-6xl sm:text-2xl md:text-4xl font-semibold text-center text-white uppercase tracking-wide mb-4">
         Artistic Universe
       </h1>
@@ -28,7 +28,7 @@ function AboutUs() {
       </p>
       <div className="flex">
         <Link to="/index">
-          <button className="mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline">
+          <button className="mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gray-300 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline">
             Start Exploring 🎨 🖌️ ✨
           </button>
         </Link>

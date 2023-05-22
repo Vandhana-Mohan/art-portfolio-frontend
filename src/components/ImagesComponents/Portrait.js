@@ -32,7 +32,7 @@ function Portrait({ portrait }) {
 
       <div className="flex justify-end items-center p-2 relative bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg">
         <button
-          className="mt-6 px-8 py-4 font-bold text-white text-xl sm:text-lg md:text-3xl font-semibold rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
+          className="mt-6 bg-gray-300 px-8 py-4 font-bold text-white text-xl sm:text-lg md:text-3xl font-semibold rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
           onClick={handleMoreOptions}
         >
           <HiDotsVertical />

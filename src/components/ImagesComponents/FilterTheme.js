@@ -101,7 +101,7 @@ function FilterTheme({ cat }) {
         <div className="flex flex-wrap mb-4 justify-center">
           <Link
             to={`/art/${cat.id}`}
-            className="mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
+            className="mt-6 bg-gray-300 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
           >
             View Details
           </Link>

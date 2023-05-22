@@ -22,7 +22,6 @@ function SignIn() {
 
   function google() {
     signInWithRedirect(auth, provider);
-    // navigate("/index");
   }
 
   return (
@@ -80,7 +79,7 @@ function SignIn() {
           <div className="mt-6">
             <button
               type="submit"
-              className="w-full px-4 py-2 tracking-wide transition-colors duration-200 transform mt-6 px-8 py-4 font-bold text-center text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
+              className="w-full bg-gray-300 px-4 py-2 tracking-wide transition-colors duration-200 transform mt-6 px-8 py-4 font-bold text-center text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
             >
               Login
             </button>
@@ -93,7 +92,7 @@ function SignIn() {
           <button
             type="button"
             onClick={google}
-            className="w-full px-4 py-2 tracking-wide transition-colors duration-200 transform mt-6 px-8 py-4 font-bold text-center text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
+            className="w-full bg-gray-300 px-4 py-2 tracking-wide transition-colors duration-200 transform mt-6 px-8 py-4 font-bold text-center text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
           >
             Sign In With Google &nbsp; &nbsp;
             <svg
