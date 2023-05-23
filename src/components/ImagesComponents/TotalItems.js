@@ -16,7 +16,7 @@ function TotalItems() {
   }, []);
 
   return (
-    <div className="flex items-center bg-transparent text-white rounded text-xl font-bold mb-6">
+    <div className="flex items-center bg-transparent text-black rounded text-xl font-bold mb-6">
       <h1 className="flex-1 text-2xl font-bold whitespace-nowrap">
         Total Items in Collection: {total}
       </h1>

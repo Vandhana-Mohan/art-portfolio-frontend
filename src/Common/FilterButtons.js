@@ -41,53 +41,73 @@ function FilterButtons() {
   };
 
   return (
-    <div className="flex flex-wrap items-center p-4 m-4">
+    <div className="flex flex-wrap gap-4">
       {!theme ? (
         <>
-          <div className="flex flex-wrap gap-4">
-            <button
-              className="mt-4 text-xl bg-gray-300 tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
-              onClick={() => handleThemeClick("Art")}
-            >
-              Art
-            </button>
-            <button
-              className="mt-4 text-xl bg-gray-300 tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
-              onClick={() => handleThemeClick("Creative Direction")}
-            >
-              Creative Direction
-            </button>
-            <button
-              className="mt-4 text-xl bg-gray-300 tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
-              onClick={() => handleThemeClick("Designer")}
-            >
-              Fashion
-            </button>
-            <button
-              className="mt-4 text-xl bg-gray-300 tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
-              onClick={() => handleThemeClick("Graphic Design")}
-            >
-              Graphic Design
-            </button>
-            <button
-              className="mt-4 text-xl bg-gray-300 tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
-              onClick={() => handleThemeClick("Sports")}
-            >
-              Sports
-            </button>
-            <button
-              className="mt-4 text-xl bg-gray-300 tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
-              onClick={() => handleThemeClick("Photography")}
-            >
-              Photography
-            </button>
-            <button
-              className="mt-4 text-xl bg-gray-300 tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold focus:outline-none focus:shadow-outline rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md"
-              onClick={() => handleThemeClick("Architecture")}
-            >
-              Architecture
-            </button>
-          </div>
+          <button
+            onClick={() => handleThemeClick("Art")}
+            className="text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline font-semibold hover:text-white hover:bg-yellow-500 hover:border-yellow-500"
+          >
+            Art
+          </button>
+
+          <button
+            onClick={() => handleThemeClick("Food")}
+            className="text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline font-semibold hover:text-white hover:bg-yellow-500 hover:border-yellow-500"
+          >
+            Food
+          </button>
+
+          <button
+            onClick={() => handleThemeClick("Family")}
+            className="text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline font-semibold hover:text-white hover:bg-yellow-500 hover:border-yellow-500"
+          >
+            Family
+          </button>
+
+          <button
+            onClick={() => handleThemeClick("Design")}
+            className="text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline font-semibold hover:text-white hover:bg-yellow-500 hover:border-yellow-500"
+          >
+            Design
+          </button>
+
+          <button
+            className="text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline font-semibold hover:text-white hover:bg-yellow-500 hover:border-yellow-500"
+            onClick={() => handleThemeClick("Creative Direction")}
+          >
+            Creative Direction
+          </button>
+          <button
+            className="text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline font-semibold hover:text-white hover:bg-yellow-500 hover:border-yellow-500"
+            onClick={() => handleThemeClick("Designer")}
+          >
+            Fashion
+          </button>
+          <button
+            className="text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline font-semibold hover:text-white hover:bg-yellow-500 hover:border-yellow-500"
+            onClick={() => handleThemeClick("Graphic Design")}
+          >
+            Graphic Design
+          </button>
+          <button
+            className="text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline font-semibold hover:text-white hover:bg-yellow-500 hover:border-yellow-500"
+            onClick={() => handleThemeClick("Sports")}
+          >
+            Sports
+          </button>
+          <button
+            className="text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline font-semibold hover:text-white hover:bg-yellow-500 hover:border-yellow-500"
+            onClick={() => handleThemeClick("Photography")}
+          >
+            Photography
+          </button>
+          <button
+            className="text-xl tracking-wider font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline font-semibold hover:text-white hover:bg-yellow-500 hover:border-yellow-500"
+            onClick={() => handleThemeClick("Architecture")}
+          >
+            Architecture
+          </button>
         </>
       ) : null}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

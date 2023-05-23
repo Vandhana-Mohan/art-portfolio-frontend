@@ -5,15 +5,15 @@ function Home() {
   return (
     <div className="flex flex-col items-center bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 p-6">
       <div className="max-w-screen-xl">
-        <h1 className="text-6xl sm:text-2xl md:text-4xl font-bold tracking-wider text-center mb-8 text-white">
+        <h1 className="text-6xl sm:text-2xl md:text-4xl font-bold tracking-wider text-center mb-8 text-black">
           A Boundless Canvas for Visionaries: A Haven for Creative Artistry
         </h1>
         <CarouselComponent />
         <div className="text-center mt-8 p-8 w-full py-20">
-          <h1 className="text-6xl sm:text-2xl md:text-4xl font-bold text-white tracking-wide">
+          <h1 className="text-6xl sm:text-2xl md:text-4xl font-bold text-black tracking-wide">
             Create your Online Portfolio
           </h1>
-          <p className="text-white text-xl md:text-lg sm:text-xl mt-4">
+          <p className="text-black text-xl md:text-lg sm:text-xl mt-4">
             An easy-to-use portfolio builder to showcase your work
           </p>
           <Link to="/SignIn">

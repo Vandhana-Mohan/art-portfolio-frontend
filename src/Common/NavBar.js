@@ -8,7 +8,7 @@ function NavBar() {
         <li className="mx-2 sm:mx-4 md:mx-8 lg:mx-32">
           <Link
             to="/"
-            className="transition-colors duration-300 text-2xl sm:text-2xl md:text-2xl font-semibold text-center text-white tracking-wide mb-4"
+            className="transition-colors duration-300 text-2xl sm:text-2xl md:text-2xl font-semibold text-center text-black tracking-wide mb-4"
           >
             Examples
           </Link>
@@ -16,7 +16,7 @@ function NavBar() {
         <li className="mx-2 sm:mx-4 md:mx-8 lg:mx-16">
           <Link
             to="/index"
-            className="transition-colors duration-300 text-2xl sm:text-2xl md:text-2xl font-semibold text-center text-white tracking-wide mb-4"
+            className="transition-colors duration-300 text-2xl sm:text-2xl md:text-2xl font-semibold text-center text-black tracking-wide mb-4"
           >
             My Collection
           </Link>
@@ -32,7 +32,7 @@ function NavBar() {
         <li className="mx-2 sm:mx-4 md:mx-8 lg:mx-16">
           <Link
             to="/art/newImage"
-            className="transition-colors duration-300 text-2xl sm:text-2xl md:text-2xl font-semibold text-center text-white tracking-wide mb-4"
+            className="transition-colors duration-300 text-2xl sm:text-2xl md:text-2xl font-semibold text-center text-black tracking-wide mb-4"
           >
             Add Image to Collection
           </Link>

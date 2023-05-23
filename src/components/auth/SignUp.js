@@ -28,8 +28,8 @@ function SignUp() {
   }
 
   return (
-    <div className="relative flex flex-col justify-center bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg overflow-hidden">
-      <div className="w-full p-6 m-auto bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg lg:max-w-xl">
+    <div className="relative flex flex-col justify-center rounded-lg shadow-yellow-500/50 shadow-lg overflow-hidden">
+      <div className="w-full p-6 m-auto rounded-lg shadow-yellow-500/50 shadow-lg lg:max-w-xl">
         <h1 className="text-6xl sm:text-2xl md:text-4xl font-semibold text-center text-white uppercase tracking-wide mb-4">
           Create Account
         </h1>
@@ -46,7 +46,7 @@ function SignUp() {
             </label>
             <input
               type="text"
-              className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              className="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
               id="first_name"
               placeholder="Enter your First Name"
               value={firstName}

@@ -10,7 +10,7 @@ function Portrait({ portrait }) {
   };
 
   return (
-    <div className="bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg">
+    <div className="rounded-lg shadow-yellow-500/50 shadow-lg">
       <Link
         to={`/art/${portrait.id}`}
         className="block w-full h-60 rounded-lg overflow-hidden transition-colors duration-300"
@@ -22,29 +22,29 @@ function Portrait({ portrait }) {
             src={portrait.image_url}
           />
         ) : (
-          <div className="flex items-center justify-center w-full h-full bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg">
-            <p className="text-white-500 font-bold text-xl text-center">
+          <div className="flex items-center justify-center w-full h-full rounded-lg shadow-yellow-500/50 shadow-lg">
+            <p className="text-black-500 font-bold text-xl text-center">
               No Image Available
             </p>
           </div>
         )}
       </Link>
 
-      <div className="flex justify-end items-center p-2 relative bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg">
+      <div className="flex justify-end items-center p-2 relative rounded-lg shadow-yellow-500/50 shadow-lg">
         <button
-          className="mt-6 bg-gray-300 px-8 py-4 font-bold text-white text-xl sm:text-lg md:text-3xl font-semibold rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
+          className="mt-6 px-8 py-4 font-bold text-black text-xl sm:text-lg md:text-3xl font-semibold rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:text-black shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline"
           onClick={handleMoreOptions}
         >
           <HiDotsVertical />
         </button>
 
         {showOptions && (
-          <div className="absolute right-0 mt-2 bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg">
+          <div className="absolute right-0 mt-2 rounded-lg shadow-yellow-500/50 shadow-lg">
             <ul className="py-2">
-              <li className="px-4 text-xl font-bold tracking-wide py-2 bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg">
+              <li className="px-4 text-xl font-bold tracking-wide py-2 rounded-lg shadow-yellow-500/50 shadow-lg">
                 <Link to="/help">Add to Collection</Link>
               </li>
-              <li className="px-4 py-2 text-xl font-bold tracking-wide bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
+              <li className="px-4 py-2 text-xl font-bold tracking-wide  rounded-lg shadow-yellow-500/50 shadow-lg">
                 <Link to={`/art/${portrait.id}`}>View </Link>
               </li>
             </ul>
@@ -52,10 +52,10 @@ function Portrait({ portrait }) {
         )}
       </div>
 
-      <div className="p-2 text-center bg-gradient-to-r from-yellow-200 via-pink-500 to-red-500 rounded-lg shadow-yellow-500/50 shadow-lg">
+      <div className="text-center rounded-lg shadow-yellow-500/50 shadow-lg">
         <Link
           to={`/art/${portrait.id}`}
-          className="text-white font-bold text-3xl tracking-wider capitalize hover:underline"
+          className="text-black font-bold text-xl tracking-wider capitalize hover:underline"
         >
           {portrait.title}
         </Link>

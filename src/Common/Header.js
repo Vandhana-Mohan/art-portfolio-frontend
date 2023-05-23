@@ -14,7 +14,7 @@ function Header() {
               className="w-36 h-36 object-contain"
             />
             <h1
-              className="text-white tracking-wider text-3xl sm:text-5xl font-bold"
+              className="text-black tracking-wider text-5xl sm:text-5xl font-bold"
               style={{ fontFamily: "'Alex Brush', cursive" }}
             >
               Artistic Universe

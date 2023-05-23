@@ -28,7 +28,7 @@ function AboutUs() {
       </p>
       <div className="flex">
         <Link to="/index">
-          <button className="mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold rounded-lg bg-gray-300 hover:from-pink-500 hover:to-yellow-500 hover:text-white shadow-yellow-500/50 shadow-md rounded focus:outline-none focus:shadow-outline">
+          <button className="mt-4 text-xl tracking-wider bg-gray-300 font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline mt-6 px-8 py-4 font-bold text-black text-2xl sm:text-lg md:text-xl font-semibold hover:text-white">
             Start Exploring 🎨 🖌️ ✨
           </button>
         </Link>

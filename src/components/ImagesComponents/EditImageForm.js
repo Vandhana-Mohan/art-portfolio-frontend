@@ -87,7 +87,7 @@ function EditImageForm(authUser) {
   }
 
   return (
-    <div className="p-6 m-6 bg-gradient-to-r from-yellow-200 via-pink-300 to-red-300 rounded-lg shadow-yellow-500/50 shadow-lg">
+    <div className="p-6 m-6 rounded-lg shadow-yellow-500/50 shadow-lg">
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col w-full">
           <label
